@@ -17,12 +17,107 @@
                 </li>
 
                 <li>
-                    <a href="order-history">
+                    <a href="user.order-history">
                         <i class="fas fa-history" style="font-size: 1.25rem;"></i>
                         <span data-key="t-dashboard">@lang('translation.Order_History')</span>
                     </a>
                 </li>
-
+                <!-- admin -->
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i data-feather="grid"></i>
+                        <span data-key="t-apps">@lang('translation.Apps_Admin')</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <!-- <li>
+                            <a href="javascript: void(0);" class="has-arrow">
+                                <span data-key="t-invoices">@lang('translation.Product')</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                
+                                <li><a href=""
+                                    data-key="t-invoice-list">@lang('translation.Pump_Catalog_Selection')</a>
+                                </li>
+                                <li><a href="admin.HP"
+                                        data-key="t-invoice-list">@lang('translation.HP')</a></li>
+                                <li><a href="admin.product-hp"
+                                        data-key="t-invoice-detail">@lang('translation.No_Of_Pump')</a></li>
+                            </ul>
+                        </li> -->
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow">
+                                <span data-key="t-invoices">@lang('translation.Pump_Catalog_Selection')</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="admin.add-products"
+                                        data-key="t-invoice-list">@lang('translation.Add_Products')</a></li>
+                                <li><a href="admin.manage_products"
+                                        data-key="t-invoice-list">@lang('translation.Manage_Products')</a></li>
+                                <li><a href="admin.hp_products"
+                                        data-key="t-invoice-list">@lang('translation.HP')</a></li>
+                                <!-- <li><a href="admin.no-of-pump"
+                                        data-key="t-invoice-detail">@lang('translation.No_Of_Pump')</a></li> -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow">
+                                <span data-key="t-invoices">@lang('translation.Panel_Incomer_Selection')</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="admin.incomer-products"
+                                        data-key="t-invoice-list">@lang('translation.Incomer')</a></li>
+                                <li><a href="admin.volt-meter"
+                                        data-key="t-invoice-list">@lang('translation.Volt_Meter')</a></li>
+                                <li><a href="admin.ammeter"
+                                        data-key="t-invoice-list">@lang('translation.Ammeter')</a></li>
+                                <li><a href="admin.SPP"
+                                        data-key="t-invoice-detail">@lang('translation.SPP')</a></li>
+                                <li><a href="admin.hooter"
+                                        data-key="t-invoice-detail">@lang('translation.Hooter')</a></li>
+                                <li><a href="admin.feeder-ammeter"
+                                        data-key="t-invoice-detail">@lang('translation.Feeder_Ammeter')</a></li>
+                                <li><a href="admin.switch-make"
+                                        data-key="t-invoice-detail">@lang('translation.Switch_Make')</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow">
+                                <span data-key="t-invoices">@lang('translation.Section_1')</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="admin.panel-location"
+                                        data-key="t-invoice-list">@lang('translation.Panel_Location')</a></li>
+                                <li><a href="admin.panel-colour"
+                                        data-key="t-invoice-list">@lang('translation.Panel_Colour')</a></li>
+                                <li><a href="admin.busbar"
+                                        data-key="t-invoice-list">@lang('translation.Busbar')</a></li>
+                                <li><a href="admin.cable-entry"
+                                        data-key="t-invoice-detail">@lang('translation.Cable_Entry')</a></li>
+                                <li><a href="admin.type1-type2"
+                                        data-key="t-invoice-detail">@lang('translation.Type1_Type2')</a></li>
+                              
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow">
+                                <span data-key="t-invoices">@lang('translation.Section_2')</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="admin.cable-make"
+                                        data-key="t-invoice-list">@lang('translation.Cable_Make')</a></li>
+                                <li><a href="admin.access"
+                                        data-key="t-invoice-list">@lang('translation.Access')</a></li>
+                                <li><a href="admin.mounting"
+                                        data-key="t-invoice-list">@lang('translation.Mounting')</a></li>
+                                <li><a href="admin.panel-type"
+                                        data-key="t-invoice-detail">@lang('translation.Panel_Type')</a></li>
+                               
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <!-- user -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="grid"></i>
@@ -56,9 +151,9 @@
                                 <span data-key="t-invoices">@lang('translation.Quotation')</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="apps-quotation-list"
+                                <li><a href="user.apps-quotation-list"
                                         data-key="t-invoice-list">@lang('translation.Quotation_List')</a></li>
-                                <li><a href="apps-quotation-detail"
+                                <li><a href="user.apps-quotation-detail"
                                         data-key="t-invoice-detail">@lang('translation.Quotation_Detail')</a></li>
                             </ul>
                         </li>
@@ -67,12 +162,13 @@
                                 <span data-key="t-invoices">@lang('translation.BOQ')</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="apps-boq-list"
+                                <li><a href="user.apps-boq-list"
                                         data-key="t-invoice-list">@lang('translation.BOQ_List')</a></li>
-                                <li><a href="apps-boq-detail"
+                                <li><a href="user.apps-boq-detail"
                                         data-key="t-invoice-detail">@lang('translation.BOQ_Detail')</a></li>
                             </ul>
                         </li>
+                        
                         <li>
                             <a href="javascript: void(0);" class="has-arrow">
                                 <span data-key="t-contacts">@lang('translation.Contacts')</span>
@@ -140,7 +236,7 @@
 
                 <!-- <li class="menu-title mt-2" data-key="t-components">@lang('translation.Elements')</li> -->
 
-                <!-- <li>
+                 <!--<li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="briefcase"></i>
                         <span data-key="t-components">@lang('translation.Components')</span>
@@ -148,7 +244,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="ui-alerts" data-key="t-alerts">@lang('translation.Alerts')</a></li>
                         <li><a href="ui-buttons" data-key="t-buttons">@lang('translation.Buttons')</a></li>
-                        <li><a href="ui-cards" data-key="t-cards">@lang('translation.Cards')</a></li>
+                        <li><a href="user.ui-cards" data-key="t-cards">@lang('translation.Cards')</a></li>
                         <li><a href="ui-carousel" data-key="t-carousel">@lang('translation.Carousel')</a></li>
                         <li><a href="ui-dropdowns" data-key="t-dropdowns">@lang('translation.Dropdowns')</a></li>
                         <li><a href="ui-grid" data-key="t-grid">@lang('translation.Grid')</a></li>
@@ -192,16 +288,16 @@
                         <span data-key="t-forms">@lang('translation.Forms')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="form-elements" data-key="t-form-elements">@lang('translation.Basic_Elements')</a>
+                        <li><a href="user.form-elements" data-key="t-form-elements">@lang('translation.Basic_Elements')</a>
                         </li>
-                        <li><a href="form-validation" data-key="t-form-validation">@lang('translation.Validation')</a>
+                        <li><a href="user.form-validation" data-key="t-form-validation">@lang('translation.Validation')</a>
                         </li>
-                        <li><a href="form-advanced" data-key="t-form-advanced">@lang('translation.Advanced_Plugins')</a>
+                        <li><a href="user.form-advanced" data-key="t-form-advanced">@lang('translation.Advanced_Plugins')</a>
                         </li>
-                        <li><a href="form-editors" data-key="t-form-editors">@lang('translation.Editors')</a></li>
-                        <li><a href="form-uploads" data-key="t-form-upload">@lang('translation.File_Upload')</a></li>
-                        <li><a href="form-wizard" data-key="t-form-wizard">@lang('translation.Wizard')</a></li>
-                        <li><a href="form-mask" data-key="t-form-mask">@lang('translation.Mask')</a></li>
+                        <li><a href="user.form-editors" data-key="t-form-editors">@lang('translation.Editors')</a></li>
+                        <li><a href="user.form-uploads" data-key="t-form-upload">@lang('translation.File_Upload')</a></li>
+                        <li><a href="user.form-wizard" data-key="t-form-wizard">@lang('translation.Wizard')</a></li>
+                        <li><a href="user.form-mask" data-key="t-form-mask">@lang('translation.Mask')</a></li>
                     </ul>
                 </li>
 
@@ -211,12 +307,12 @@
                         <span data-key="t-tables">@lang('translation.Tables')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="tables-basic" data-key="t-basic-tables">@lang('translation.Bootstrap_Basic')</a>
+                        <li><a href="user.tables-basic" data-key="t-basic-tables">@lang('translation.Bootstrap_Basic')</a>
                         </li>
-                        <li><a href="tables-datatable" data-key="t-data-tables">@lang('translation.DataTables')</a></li>
-                        <li><a href="tables-responsive"
+                        <li><a href="user.tables-datatable" data-key="t-data-tables">@lang('translation.DataTables')</a></li>
+                        <li><a href="user.tables-responsive"
                                 data-key="t-responsive-table">@lang('translation.Responsive')</a></li>
-                        <li><a href="tables-editable" data-key="t-editable-table">@lang('translation.Editable')</a></li>
+                        <li><a href="user.tables-editable" data-key="t-editable-table">@lang('translation.Editable')</a></li>
                     </ul>
                 </li>
 

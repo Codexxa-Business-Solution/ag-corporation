@@ -69,7 +69,7 @@
                                     </th>
                                     <th style="width: 120px;">BOQ ID</th>
                                     <th>Date</th>
-                                    <th>Billing Name</th>
+                                    <th>Company Name</th>
                                     <!-- <th>Amount</th>
                                     <th>Status</th> -->
                                     <th style="width: 150px;">Download Pdf</th>

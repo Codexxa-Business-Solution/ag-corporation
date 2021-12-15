@@ -27,18 +27,43 @@
                 <div class="card-body">
                     <div class="invoice-title">
                         <div class="d-flex align-items-start">
-                            <div class="flex-grow-1">
+                            <div class="flex-grow-1" style="text-align:center;">
                                 <div class="mb-4">
                                 <img src="assets/images/ag-logo-new.jpeg" alt="" style="width: 165px;height: 112px;">
+                                    <p style="font-weight: bold;font-size: 14px;margin: 0px;">H.No.161/2,Pune Nashik Highway Opposite Shell Petrol Pump,
+                                            Village-Kuruli, Tal-Khed, Dist-Pune, Pin -410501, 
+                                    </p>
+                                    <p style="font-weight: bold;font-size: 14px;margin: 0px;">Tel: 020- 65115101, Email- agcorp.pune@gmail.com</p>  
+                                    <p style="font-weight: bold;font-size: 14px;margin: 0px;">Web: www.agcorporation.in</p> 
+                                    <div style="background:blue;color:white;">
+                                        <ul>
+                                            <li style="display: inline;margin-right: 15px;">
+                                            <i class="fab fa-bandcamp" aria-hidden="true" style="color:white;"></i>
+                                            Pump Suppliers</li>
+                                            <li style="display: inline;margin-right: 15px;">
+                                            <i class="fab fa-bandcamp" aria-hidden="true" style="color:white;"></i>
+                                            Control Panel Manufacturer</li>
+                                            <li style="display: inline;margin-right: 15px;">
+                                            <i class="fab fa-bandcamp" aria-hidden="true" style="color:white;"></i>
+                                            Electrical Contractor (Govt.)</li>
+                                            <li style="display: inline;margin-right: 15px;">
+                                            <i class="fab fa-bandcamp" aria-hidden="true" style="color:white;"></i>
+                                            Energy Saving Projects</li>
+                                        </ul>
+                                    </div>
                                 </div>
+                                
                             </div>
-                            <div class="flex-shrink-0">
+                            <!-- <div class="flex-shrink-0">
                                 <div class="mb-4">
                                     <h4 class="float-end font-size-16">Quotation # 12345</h4>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <h2 style="text-align:center;">Quotation For Electrical Control Panel</h2>
+                        <div class="mb-4">
+                            <h4 class="float-end font-size-16">Quotation # 12345</h4>
+                        </div>
                         <h5 class="font-size-14 mb-2">Richard Saul</h5>
                         <p class="mb-1">1874 County Line Road City, FL 33566</p>
                         <p class="mb-1">Maharashtra</p>
@@ -46,6 +71,7 @@
                         <p class="mb-1"><i class="mdi mdi-phone align-middle me-1"></i> 012-345-6789</p>
                         <p class="mb-1">Project Name</p>
                         <p>Panel Cat No. </p>
+                        
                     </div>
                     <hr class="my-4">
                     <div class="row">
@@ -276,7 +302,7 @@
             </div>
         </div>
     </div>
-
+<br><br>
     <div class="row">
         <div class="col">
                     <div class="table-responsive">

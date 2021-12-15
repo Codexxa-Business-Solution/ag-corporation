@@ -125,7 +125,7 @@
                         <li class="nav-item dropdown">
                             <button type="button" class="btn btn-info btn-rounded waves-effect 
                                 waves-light"> 
-                                <a class=" dropdown-toggle arrow-none" href="get-a-quote" 
+                                <a class=" dropdown-toggle arrow-none" href="user.get-a-quote" 
                             id="topnav-dashboard" role="button" style="color:white;">
                                 <!-- <i data-feather="home"></i> -->
                                 <span data-key="t-dashboards">@lang('translation.Get_A_Quote')</span>
