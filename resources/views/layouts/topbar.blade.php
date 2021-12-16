@@ -124,7 +124,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <button type="button" class="btn btn-info btn-rounded waves-effect 
-                                waves-light"> 
+                                waves-light" style="background: #0069a5;"> 
                                 <a class=" dropdown-toggle arrow-none" href="user.get-a-quote" 
                             id="topnav-dashboard" role="button" style="color:white;">
                                 <!-- <i data-feather="home"></i> -->

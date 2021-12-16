@@ -708,17 +708,18 @@ button:hover {
                                                             id="example-search-input">
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="example-number-input" class="form-label">Panel Price</label>
-                                                        <input class="form-control" type="number" placeholder="3,33,333" id="example-number-input">
-                                                    </div> 
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                    <div class="mb-3">
                                                         <label for="example-datetime-local-input" class="form-label">Date</label>
                                                         <input class="form-control" type="datetime-local" value="2019-08-19T13:45:00"
                                                             id="example-datetime-local-input">
                                                     </div>
+                                                    <!-- <div class="mb-3">
+                                                        <label for="example-number-input" class="form-label">Panel Price</label>
+                                                        <input class="form-control" type="number" placeholder="3,33,333" id="example-number-input">
+                                                    </div>  -->
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                    
                                                     
                                                     <div class="mb-3">
                                                         <label for="example-datetime-local-input" class="form-label">Delivery Date</label>
@@ -1147,7 +1148,7 @@ button:hover {
   <div style="overflow:auto;">
     <div style="float:right;">
       <button type="button" id="prevBtn" onclick="nextPrev(-1)" style="border-radius: 25px;">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)" style="border-radius: 25px;">Next</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)" style="border-radius: 25px;background: #0069a5;">Next</button>
     </div>
   </div>
   <!-- Circles which indicates the steps of the form: -->

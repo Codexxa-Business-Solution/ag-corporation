@@ -21,23 +21,23 @@
             <!-- card -->
             <div class="card card-h-100">
                 <!-- card body -->
-                <div class="card-body">
+                <div class="card-body" style="background: linear-gradient(to bottom, #3a4084 0%, #0069a5 100%);">
                     <div class="row align-items-center">
-                        <div class="col-6">
-                            <span class="text-muted mb-3 lh-1 d-block text-truncate">My Wallet</span>
-                            <h4 class="mb-3">
-                                $<span class="counter-value" data-target="865.2">0</span>k
+                        <div class="col-7" >
+                            <span class="text-muted mb-3 lh-1 d-block text-truncate">No Of Quotation</span>
+                            <h4 class="mb-3" style="color:#fff;">
+                                <span class="counter-value" data-target="20">20</span>
                             </h4>
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-5">
                             <div id="mini-chart1" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
                         </div>
                     </div>
-                    <div class="text-nowrap">
-                        <span class="badge bg-soft-success text-success">+$20.9k</span>
+                    <!-- <div class="text-nowrap">
+                        <span class="badge bg-soft-success text-success">-29 Trades</span>
                         <span class="ms-1 text-muted font-size-13">Since last week</span>
-                    </div>
+                    </div> -->
                 </div><!-- end card body -->
             </div><!-- end card -->
         </div><!-- end col -->
@@ -46,22 +46,22 @@
             <!-- card -->
             <div class="card card-h-100">
                 <!-- card body -->
-                <div class="card-body">
+                <div class="card-body" style="background: linear-gradient(to bottom, #3a4084 0%, #0069a5 100%);">
                     <div class="row align-items-center">
-                        <div class="col-6">
-                            <span class="text-muted mb-3 lh-1 d-block text-truncate">Number of Trades</span>
-                            <h4 class="mb-3">
-                                <span class="counter-value" data-target="6258">0</span>
+                        <div class="col-7">
+                            <span class="text-muted mb-3 lh-1 d-block text-truncate">Amount Of<br> Quotation</span>
+                            <h4 class="mb-3" style="color:#fff;">
+                            ₹ <span class="counter-value" data-target="6258">0</span>k
                             </h4>
                         </div>
-                        <div class="col-6">
+                        <div class="col-5">
                             <div id="mini-chart2" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
                         </div>
                     </div>
-                    <div class="text-nowrap">
-                        <span class="badge bg-soft-danger text-danger">-29 Trades</span>
+                    <!-- <div class="text-nowrap">
+                        <span class="badge bg-soft-danger text-danger">+₹20.9k </span>
                         <span class="ms-1 text-muted font-size-13">Since last week</span>
-                    </div>
+                    </div> -->
                 </div><!-- end card body -->
             </div><!-- end card -->
         </div><!-- end col-->
@@ -70,22 +70,22 @@
             <!-- card -->
             <div class="card card-h-100">
                 <!-- card body -->
-                <div class="card-body">
+                <div class="card-body" style="background: linear-gradient(to bottom, #3a4084 0%, #0069a5 100%);">
                     <div class="row align-items-center">
-                        <div class="col-6">
-                            <span class="text-muted mb-3 lh-1 d-block text-truncate">Invested Amount</span>
-                            <h4 class="mb-3">
-                                $<span class="counter-value" data-target="4.32">0</span>M
+                        <div class="col-7">
+                            <span class="text-muted mb-3 lh-1 d-block text-truncate">No Of BOQ</span>
+                            <h4 class="mb-3" style="color:#fff;">
+                                <span class="counter-value" data-target="4.32">10</span>
                             </h4>
                         </div>
-                        <div class="col-6">
+                        <div class="col-5" >
                             <div id="mini-chart3" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
                         </div>
                     </div>
-                    <div class="text-nowrap">
-                        <span class="badge bg-soft-success text-success">+ $2.8k</span>
+                    <!-- <div class="text-nowrap">
+                        <span class="badge bg-soft-success text-success">-19 Trades</span>
                         <span class="ms-1 text-muted font-size-13">Since last week</span>
-                    </div>
+                    </div> -->
                 </div><!-- end card body -->
             </div><!-- end card -->
         </div><!-- end col -->
@@ -94,35 +94,36 @@
             <!-- card -->
             <div class="card card-h-100">
                 <!-- card body -->
-                <div class="card-body">
+                <div class="card-body" style="background: linear-gradient(to bottom, #3a4084 0%, #0069a5 100%);">
                     <div class="row align-items-center">
-                        <div class="col-6">
-                            <span class="text-muted mb-3 lh-1 d-block text-truncate">Profit Ration</span>
-                            <h4 class="mb-3">
-                                <span class="counter-value" data-target="12.57">0</span>%
+                        <div class="col-7">
+                            <span class="text-muted mb-3 lh-1 d-block text-truncate">Orders Amount</span>
+                            <h4 class="mb-3" style="color:#fff;">
+                            ₹ <span class="counter-value" data-target="6258">2000</span>k
                             </h4>
                         </div>
-                        <div class="col-6">
-                            <div id="mini-chart4" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                        <div class="col-5">
+                            <div id="mini-chart2" data-colors='["#5156be"]'
+                             class="apex-charts mb-2"></div>
                         </div>
                     </div>
-                    <div class="text-nowrap">
-                        <span class="badge bg-soft-success text-success">+2.95%</span>
+                    <!-- <div class="text-nowrap">
+                        <span class="badge bg-soft-danger text-danger">+₹20.9k </span>
                         <span class="ms-1 text-muted font-size-13">Since last week</span>
-                    </div>
+                    </div> -->
                 </div><!-- end card body -->
             </div><!-- end card -->
         </div><!-- end col -->
     </div><!-- end row-->
 
     <div class="row">
-        <div class="col-xl-5">
+        <div class="col-xl-6">
             <!-- card -->
             <div class="card card-h-100">
                 <!-- card body -->
                 <div class="card-body">
                     <div class="d-flex flex-wrap align-items-center mb-4">
-                        <h5 class="card-title me-2">Wallet Balance</h5>
+                        <h5 class="card-title me-2">Quotation </h5>
                         <div class="ms-auto">
                             <div>
                                 <button type="button" class="btn btn-soft-secondary btn-sm">
@@ -175,9 +176,9 @@
             <!-- end card -->
         </div>
         <!-- end col -->
-        <div class="col-xl-7">
+        <div class="col-xl-6">
             <div class="row">
-                <div class="col-xl-8">
+                <div class="col-xl-12">
                     <!-- card -->
                     <div class="card card-h-100">
                         <!-- card body -->
@@ -236,10 +237,8 @@
                 </div>
                 <!-- end col -->
 
-                <div class="col-xl-4">
-                    <!-- card -->
+                <!-- <div class="col-xl-4">
                     <div class="card bg-primary text-white shadow-primary card-h-100">
-                        <!-- card body -->
                         <div class="card-body p-0">
                             <div id="carouselExampleCaptions" class="carousel slide text-center widget-carousel"
                                 data-bs-ride="carousel">
@@ -262,7 +261,6 @@
                                                     class="mdi mdi-arrow-right ms-1"></i></button>
                                         </div>
                                     </div>
-                                    <!-- end carousel-item -->
                                     <div class="carousel-item">
                                         <div class="text-center p-4">
                                             <i class="mdi mdi-ethereum widget-box-1-icon"></i>
@@ -281,7 +279,6 @@
                                                     class="mdi mdi-arrow-right ms-1"></i></button>
                                         </div>
                                     </div>
-                                    <!-- end carousel-item -->
                                     <div class="carousel-item">
                                         <div class="text-center p-4">
                                             <i class="mdi mdi-litecoin widget-box-1-icon"></i>
@@ -300,9 +297,9 @@
                                                     class="mdi mdi-arrow-right ms-1"></i></button>
                                         </div>
                                     </div>
-                                    <!-- end carousel-item -->
+                                   
                                 </div>
-                                <!-- end carousel-inner -->
+                               
 
                                 <div class="carousel-indicators carousel-indicators-rounded">
                                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
@@ -312,26 +309,26 @@
                                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                                         aria-label="Slide 3"></button>
                                 </div>
-                                <!-- end carousel-indicators -->
+                               
                             </div>
-                            <!-- end carousel -->
+                         
                         </div>
-                        <!-- end card body -->
+                        
                     </div>
-                    <!-- end card -->
-                </div>
-                <!-- end col -->
+                   
+                </div> -->
+                
             </div>
-            <!-- end row -->
+           
         </div>
-        <!-- end col -->
+      
     </div> <!-- end row-->
 
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-xl-8">
-            <!-- card -->
+           
             <div class="card">
-                <!-- card body -->
+                
                 <div class="card-body">
                     <div class="d-flex flex-wrap align-items-center mb-4">
                         <h5 class="card-title me-2">Market Overview</h5>
@@ -459,16 +456,16 @@
                         </div>
                     </div>
                 </div>
-                <!-- end card -->
+                
             </div>
-            <!-- end col -->
+            
         </div>
-        <!-- end row-->
+        
 
         <div class="col-xl-4">
-            <!-- card -->
+           
             <div class="card">
-                <!-- card body -->
+                
                 <div class="card-body">
                     <div class="d-flex flex-wrap align-items-center mb-4">
                         <h5 class="card-title me-2">Sales by Locations</h5>
@@ -514,15 +511,15 @@
                         </div>
                     </div>
                 </div>
-                <!-- end card body -->
+                
             </div>
-            <!-- end card -->
+           
         </div>
-        <!-- end col -->
-    </div>
-    <!-- end row-->
+       
+    </div> -->
+    
 
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-xl-4">
             <div class="card">
                 <div class="card-header align-items-center d-flex">
@@ -537,7 +534,7 @@
                             </li>
                         </ul>
                     </div>
-                </div><!-- end card header -->
+                </div>
 
                 <div class="card-body">
                     <div class="tab-content">
@@ -589,7 +586,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end tab pane -->
+                        
                         <div class="tab-pane" id="sell-tab" role="tabpanel">
                             <div class="float-end ms-2">
                                 <h5 class="font-size-14"><i
@@ -638,15 +635,15 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end tab pane -->
+                        
                     </div>
-                    <!-- end tab content -->
+                   
                 </div>
-                <!-- end card body -->
+               
             </div>
-            <!-- end card -->
+            
         </div>
-        <!-- end col -->
+        
 
         <div class="col-xl-4">
             <div class="card">
@@ -670,9 +667,9 @@
                                 </a>
                             </li>
                         </ul>
-                        <!-- end nav tabs -->
+                        
                     </div>
-                </div><!-- end card header -->
+                </div>
 
                 <div class="card-body px-0">
                     <div class="tab-content">
@@ -886,7 +883,7 @@
                                 </table>
                             </div>
                         </div>
-                        <!-- end tab pane -->
+                       
                         <div class="tab-pane" id="transactions-buy-tab" role="tabpanel">
                             <div class="table-responsive px-3" data-simplebar style="max-height: 352px;">
                                 <table class="table align-middle table-nowrap table-borderless">
@@ -1099,7 +1096,7 @@
                                 </table>
                             </div>
                         </div>
-                        <!-- end tab pane -->
+                        
                         <div class="tab-pane" id="transactions-sell-tab" role="tabpanel">
                             <div class="table-responsive px-3" data-simplebar style="max-height: 352px;">
                                 <table class="table align-middle table-nowrap table-borderless">
@@ -1312,15 +1309,15 @@
                                 </table>
                             </div>
                         </div>
-                        <!-- end tab pane -->
+                        
                     </div>
-                    <!-- end tab content -->
+                   
                 </div>
-                <!-- end card body -->
+                
             </div>
-            <!-- end card -->
+           
         </div>
-        <!-- end col -->
+       
 
         <div class="col-xl-4">
             <div class="card">
@@ -1334,7 +1331,7 @@
                             <option value="Month">Last Month</option>
                         </select>
                     </div>
-                </div><!-- end card header -->
+                </div>
 
                 <div class="card-body px-0">
                     <div class="px-3" data-simplebar style="max-height: 352px;">
@@ -1571,12 +1568,12 @@
                         </ul>
                     </div>
                 </div>
-                <!-- end card body -->
+                
             </div>
-            <!-- end card -->
+            
         </div>
-        <!-- end col -->
-    </div><!-- end row -->
+        
+    </div> -->
 
 @endsection
 
