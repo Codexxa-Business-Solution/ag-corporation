@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title') @lang('translation.Quotation_List') @endsection
+@section('title') @lang('translation.BOQ_List') @endsection
 
 @section('css')
 
@@ -15,8 +15,8 @@
 @section('content')
 
     @component('components.breadcrumb')
-        @slot('li_1') Pump Catalog Selection @endslot
-        @slot('title') Pumps List @endslot
+        @slot('li_1') Dashboard @endslot
+        @slot('title') BOQ Request @endslot
     @endcomponent
 
 
@@ -26,18 +26,22 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm">
-                            <div class="mb-4">
-                                
-                            </div>
+                            <!-- <div class="mb-4">
+                                <button type="button" class="btn btn-light waves-effect waves-light"><i
+                                        class="bx bx-plus me-1"></i> Add BOQ</button>
+                            </div> -->
                         </div>
                         <div class="col-sm-auto">
-                            <button type="button" class="btn btn-light waves-effect waves-light">
-                                    <a href="admin.add-products" data-key="t-invoice-list">
-                                        <i class="bx bx-plus me-1"></i> Add Pump
-                                    </a>
-                            </button>
+                            <div class="d-flex align-items-center gap-1 mb-4">
+                                <!-- <div class="mb-4">
+                                    <button type="button" class="btn btn-light waves-effect waves-light">
+                                        <a href="admin.add-customer" data-key="t-invoice-list">
+                                        <i class="bx bx-plus me-1"></i> Add BOQ</a>
+                                    </button>
+                                </div> -->
+                            </div>
                         </div>
-                    </div><br>
+                    </div>
                     <!-- end row -->
 
                     <div class="table-responsive">
@@ -51,15 +55,15 @@
                                             <label class="form-check-label" for="checkAll"></label>
                                         </div>
                                     </th>
-                                    <th style="width: 120px;">Pump ID</th>
-                                    <th>Pump Type</th>
-                                    <!-- <th>HP</th>
-                                    <th>No. Of Pump</th> -->
+                                    <th style="width: 120px;">BOQ ID</th>
+                                    <th>Customer Name</th>
+                                    <!-- <th>Status</th> -->
+                                    
                                     <th style="width: 90px;">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-
+                            
                                 <tr>
                                     <td>
                                         <div class="form-check font-size-16">
@@ -70,12 +74,10 @@
 
                                     <td><a href="javascript: void(0);" class="text-dark fw-medium">#MN0215</a> </td>
                                     <td>
-                                       Jockey
+                                        abc
                                     </td>
-                                    <!-- <td>20</td>
-
-                                    <td>
-                                        1
+                                    <!-- <td>
+                                       <div class="badge badge-soft-success font-size-12">Approve</div>
                                     </td> -->
                                    
                                     <td>
@@ -87,7 +89,6 @@
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Print</a></li>
                                                 <li><a class="dropdown-item" href="#">Delete</a></li>
                                             </ul>
                                         </div>
@@ -103,12 +104,10 @@
 
                                     <td><a href="javascript: void(0);" class="text-dark fw-medium">#MN0215</a> </td>
                                     <td>
-                                        Hydrant
+                                        abc
                                     </td>
-                                    <!-- <td>75</td>
-
-                                    <td>
-                                        1
+                                    <!-- <td>
+                                    <div class="badge badge-soft-warning font-size-12">Pending</div>
                                     </td> -->
                                    
                                     <td>
@@ -120,7 +119,6 @@
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Print</a></li>
                                                 <li><a class="dropdown-item" href="#">Delete</a></li>
                                             </ul>
                                         </div>

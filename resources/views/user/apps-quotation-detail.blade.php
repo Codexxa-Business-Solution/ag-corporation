@@ -196,6 +196,89 @@
                                         </div>
                     </div>
                     <div class="col-sm-12">
+                        <br>
+                        <h4 class="card-title">Section 1</h4>
+                        <div class="table-responsive">
+                                            <table class="table mb-0">
+
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>PANEL LOCATION</th>
+                                                        <th>PANEL COLOUR</th>
+                                                        <th>BUSBAR</th>
+                                                        <th>CABLE ENTRY</th>
+                                                        <th>FEEDER AMMETER</th>
+                                                        <th>TYPE1 / TYPE2</th>
+                                                       
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        
+                                                        <td>
+                                                        <label>-</label>
+                                                        </td>
+                                                        <td>
+                                                        <label>-</label>
+                                                        </td>
+                                                        <td>
+                                                        <label>-</label>
+                                                        </td>
+                                                        <td>
+                                                        <label>-</label>
+                                                        </td>
+                                                        <td>
+                                                        <label>-</label>
+                                                        </td>
+                                                        <td>
+                                                        <label>-</label>
+                                                        </td>
+
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <br>
+                        <h4 class="card-title">Section 2</h4>
+                        <div class="table-responsive">
+                                            <table class="table mb-0">
+
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>CABLE MAKE</th>
+                                                        <th>ACCESS</th>
+                                                        <th>MOUNTING</th>
+                                                        <th>PANEL TYPE</th>
+                                                    
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        
+                                                        <td>
+                                                        <label>-</label>
+                                                        </td>
+                                                        <td>
+                                                        <label>-</label>
+                                                        </td>
+                                                        <td>
+                                                        <label>-</label>
+                                                        </td>
+                                                        <td>
+                                                        <label>-</label>
+                                                        </td>
+                                                       
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                    </div>
+                    <div class="col-sm-12">
                         <!-- <br> -->
                         <div class="row">
                         <div class="col-sm-8"></div>
@@ -302,7 +385,7 @@
             </div>
         </div>
     </div>
-<br><br>
+<br><br><br>
     <div class="row">
         <div class="col">
                     <div class="table-responsive">

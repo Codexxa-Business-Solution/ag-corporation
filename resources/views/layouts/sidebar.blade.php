@@ -16,17 +16,26 @@
                     </a>
                 </li>
 
+                
+                <!-- admin -->
+                
+                
                 <li>
-                    <a href="user.order-history">
-                        <i class="fas fa-history" style="font-size: 1.25rem;"></i>
-                        <span data-key="t-dashboard">@lang('translation.Order_History')</span>
+                    <a href="admin.quotation-request">
+                        <i class="fas fa-hand-pointer" style="font-size: 1.02rem;"></i>
+                        <span data-key="t-dashboard">@lang('translation.Quotation_Request')</span>
                     </a>
                 </li>
-                <!-- admin -->
+                <li>
+                    <a href="admin.boq-request">
+                        <i class="fas fa-hand-pointer" style="font-size: 1.02rem;"></i>
+                        <span data-key="t-dashboard">@lang('translation.BOQ_Request')</span>
+                    </a>
+                </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="grid"></i>
-                        <span data-key="t-apps">@lang('translation.Apps_Admin')</span>
+                        <span data-key="t-apps">@lang('translation.Creation')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <!-- <li>
@@ -50,13 +59,12 @@
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="admin.add-products"
-                                        data-key="t-invoice-list">@lang('translation.Add_Products')</a></li>
+                                        data-key="t-invoice-list">@lang('translation.Add_Pump')</a></li>
                                 <li><a href="admin.manage_products"
-                                        data-key="t-invoice-list">@lang('translation.Manage_Products')</a></li>
+                                        data-key="t-invoice-list">@lang('translation.Manage_Pump')</a></li>
                                 <li><a href="admin.hp_products"
                                         data-key="t-invoice-list">@lang('translation.HP')</a></li>
-                                <!-- <li><a href="admin.no-of-pump"
-                                        data-key="t-invoice-detail">@lang('translation.No_Of_Pump')</a></li> -->
+                               
                             </ul>
                         </li>
                         <li>
@@ -65,7 +73,7 @@
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="admin.incomer-products"
-                                        data-key="t-invoice-list">@lang('translation.Incomer')</a></li>
+                                        data-key="t-invoice-list">@lang('translation.Indication')</a></li>
                                 <li><a href="admin.volt-meter"
                                         data-key="t-invoice-list">@lang('translation.Volt_Meter')</a></li>
                                 <li><a href="admin.ammeter"
@@ -117,11 +125,49 @@
                         
                     </ul>
                 </li>
+                <li>
+                    <a href="admin.regional-list">
+                        <i class="fas fa-users" style="font-size: 1.02rem;"></i>
+                        <span data-key="t-dashboard">@lang('translation.Regional_List')</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin.employee-list">
+                        <i class="fas fa-users" style="font-size: 1.02rem;"></i>
+                        <span data-key="t-dashboard">@lang('translation.Employee_List')</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin.customer-list">
+                        <i class="fas fa-users" style="font-size: 1.02rem;"></i>
+                        <span data-key="t-dashboard">@lang('translation.Customer_List')</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                    <i class="fas fa-user" style="font-size: 1.02rem;"></i>
+                        <span data-key="t-apps">@lang('translation.System_User')</span>
+                    </a>
+                   
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li>
+                            <a href="admin.add-role">
+                                <span data-key="t-chat">@lang('translation.Add_Role')</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="admin.add-user">
+                                <span data-key="t-dashboard">@lang('translation.Add_User')</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
                 <!-- user -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="grid"></i>
-                        <span data-key="t-apps">@lang('translation.Apps')</span>
+                        <span data-key="t-apps">@lang('translation.Apps_User')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <!-- <li>
@@ -178,33 +224,33 @@
                                         data-key="t-user-grid">@lang('translation.User_Grid')</a></li>
                                 <li><a href="apps-contacts-list"
                                         data-key="t-user-list">@lang('translation.User_List')</a></li> -->
-                                <li><a href="apps-contacts-profile"
+                                <li><a href="user.apps-contacts-profile"
                                         data-key="t-profile">@lang('translation.Profile')</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-
+                <li>
+                    <a href="user.order-history">
+                        <i class="fas fa-history" style="font-size: 1.02rem;"></i>
+                        <span data-key="t-dashboard">@lang('translation.Order_History')</span>
+                    </a>
+                </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="users"></i>
                         <span data-key="t-authentication">@lang('translation.Authentication')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="auth-login" data-key="t-login">@lang('translation.Login')</a></li>
-                        <li><a href="auth-register" data-key="t-register">@lang('translation.Register')</a></li>
-                        <li><a href="auth-recoverpw"
+                        <li><a href="user.auth-login" data-key="t-login">@lang('translation.Login')</a></li>
+                        <li><a href="user.auth-register" data-key="t-register">@lang('translation.Register')</a></li>
+                        <li><a href="user.auth-recoverpw"
                                 data-key="t-recover-password">@lang('translation.Recover_Password')</a></li>
-                        <li><a href="auth-lock-screen" data-key="t-lock-screen">@lang('translation.Lock_Screen')</a>
+                        <!-- <li><a href="user.auth-lock-screen" data-key="t-lock-screen">@lang('translation.Lock_Screen')</a>
+                        </li> -->
+                        <li><a href="user.auth-logout" data-key="t-logout">@lang('translation.Logout')</a>
                         </li>
-                        <li><a href="auth-logout" data-key="t-logout">@lang('translation.Logout')</a>
-                        </li>
-                        <!-- <li><a href="auth-confirm-mail" data-key="t-confirm-mail">@lang('translation.Confirm_Mail')</a>
-                        </li>
-                        <li><a href="auth-email-verification"
-                                data-key="t-email-verification">@lang('translation.Email_Verification')</a></li>
-                        <li><a href="auth-two-step-verification"
-                                data-key="t-two-step-verification">@lang('translation.Two_Step_Verification')</a></li> -->
+                       
                     </ul>
                 </li>
 
@@ -236,14 +282,14 @@
 
                 <!-- <li class="menu-title mt-2" data-key="t-components">@lang('translation.Elements')</li> -->
 
-                 <!--<li>
+                <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="briefcase"></i>
                         <span data-key="t-components">@lang('translation.Components')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="ui-alerts" data-key="t-alerts">@lang('translation.Alerts')</a></li>
-                        <li><a href="ui-buttons" data-key="t-buttons">@lang('translation.Buttons')</a></li>
+                        <li><a href="user.ui-buttons" data-key="t-buttons">@lang('translation.Buttons')</a></li>
                         <li><a href="user.ui-cards" data-key="t-cards">@lang('translation.Cards')</a></li>
                         <li><a href="ui-carousel" data-key="t-carousel">@lang('translation.Carousel')</a></li>
                         <li><a href="ui-dropdowns" data-key="t-dropdowns">@lang('translation.Dropdowns')</a></li>
@@ -257,7 +303,7 @@
                                 data-key="t-tabs-accordions">@lang('translation.Tabs_n_Accordions')</a></li>
                         <li><a href="ui-typography" data-key="t-typography">@lang('translation.Typography')</a></li>
                         <li><a href="ui-video" data-key="t-video">@lang('translation.Video')</a></li>
-                        <li><a href="ui-general" data-key="t-general">@lang('translation.General')</a></li>
+                        <li><a href="user.ui-general" data-key="t-general">@lang('translation.General')</a></li>
                         <li><a href="ui-colors" data-key="t-colors">@lang('translation.Colors')</a></li>
                     </ul>
                 </li>
@@ -341,7 +387,7 @@
                         <li><a href="icons-materialdesign"
                                 data-key="t-material-design">@lang('translation.Material_Design')</a></li>
                         <li><a href="icons-dripicons" data-key="t-dripicons">@lang('translation.Dripicons')</a></li>
-                        <li><a href="icons-fontawesome"
+                        <li><a href="user.icons-fontawesome"
                                 data-key="t-font-awesome">@lang('translation.Font_Awesome_5')</a></li>
                     </ul>
                 </li>

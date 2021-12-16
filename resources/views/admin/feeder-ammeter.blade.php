@@ -15,7 +15,7 @@
 @section('content')
 
     @component('components.breadcrumb')
-        @slot('li_1') Section 1 @endslot
+        @slot('li_1') Incomer Selection @endslot
         @slot('title') Feeder Ammeter List @endslot
     @endcomponent
 

@@ -662,13 +662,13 @@ button:hover {
 
                                         <div class="row">
                                             <div class="col-lg-6">
-                                                <div>
+                                                <!-- <div> 
                                                     <div class="mb-3">
                                                         <label for="example-text-input" class="form-label">Customer Name </label>
                                                         <input class="form-control" type="text" placeholder="Name" id="example-text-input">
                                                     </div>
-                                                </div>
-                                                <div class="row">
+                                                </div> -->
+                                                <!-- <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="mb-3">
                                                             <label class="form-label" for="validationCustom03">City</label>
@@ -700,48 +700,41 @@ button:hover {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="row">
                                                     <div class="mb-3">
                                                         <label for="example-search-input" class="form-label">Project Name</label>
                                                         <input class="form-control" type="text" placeholder="Project Name"
                                                             id="example-search-input">
                                                     </div>
-                                                    <!-- <div class="mb-3">
-                                                        <label for="example-email-input" class="form-label">Panel Cat No.</label>
-                                                        <input class="form-control" type="email" placeholder="101"
-                                                            id="example-email-input">
-                                                    </div>  -->
+                                                    <div class="mb-3">
+                                                        <label for="example-number-input" class="form-label">Panel Price</label>
+                                                        <input class="form-control" type="number" placeholder="3,33,333" id="example-number-input">
+                                                    </div> 
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
-                                                    <div>
+                                                    <div class="mb-3">
                                                         <label for="example-datetime-local-input" class="form-label">Date</label>
                                                         <input class="form-control" type="datetime-local" value="2019-08-19T13:45:00"
                                                             id="example-datetime-local-input">
                                                     </div>
+                                                    
                                                     <div class="mb-3">
-                                                        <label for="example-tel-input" class="form-label">Contact Person</label>
-                                                        <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="example-tel-input">
-                                                    </div>
-                                                    <div>
                                                         <label for="example-datetime-local-input" class="form-label">Delivery Date</label>
                                                         <input class="form-control" type="datetime-local" value="2019-08-19T13:45:00"
                                                             id="example-datetime-local-input">
                                                     </div>
                                                 
-                                                    <div class="mb-3">
+                                                    <!-- <div class="mb-3">
                                                         <label for="example-number-input" class="form-label">Panel SL Number</label>
                                                         <input class="form-control" type="number" placeholder="42" id="example-number-input">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="example-number-input" class="form-label">Panel Price</label>
-                                                        <input class="form-control" type="number" placeholder="3,33,333" id="example-number-input">
-                                                    </div>
-                                                    <div class="mb-3">
+                                                    </div>-->
+                                                    <!--   -->
+                                                    <!-- <div class="mb-3">
                                                         <label for="example-number-input" class="form-label">Credit Days</label>
                                                         <input class="form-control" type="number" placeholder="42" id="example-number-input">
-                                                    </div>
+                                                    </div> -->
                                             </div>
                                         </div>
                                         

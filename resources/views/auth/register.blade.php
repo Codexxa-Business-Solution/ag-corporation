@@ -108,6 +108,14 @@
                                             class="needs-validation mt-4 pt-2" novalidate action="index">
                                             @csrf
                                             <div class="mb-3">
+                                                <label for="example-text-input" class="form-label">Customer Name </label>
+                                                <input class="form-control" type="text" placeholder="Name" id="example-text-input">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="example-tel-input" class="form-label">Contact Person</label>
+                                                <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="example-tel-input">
+                                            </div>
+                                            <div class="mb-3">
                                                 <label for="useremail" class="form-label">Email</label>
                                                 <input id="email" type="email" placeholder="Enter Email"
                                                     class="form-control @error('email') is-invalid @enderror" name="email"
@@ -122,6 +130,39 @@
                                                     Please Enter Email
                                                 </div>
                                             </div>
+                                            <div class="row">
+                                                    <div class="col-md-5">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="validationCustom03">City</label>
+                                                            <input type="text" class="form-control" id="validationCustom03" placeholder="City"
+                                                                required>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid city.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="validationCustom04">State</label>
+                                                            <input type="text" class="form-control" id="validationCustom04" placeholder="State"
+                                                                required>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid state.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="validationCustom05">Zip</label>
+                                                            <input type="text" class="form-control" id="validationCustom05" 
+                                                            placeholder="Zip"
+                                                                required>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid zip.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
                                             <div class="mb-3">
                                                 <label for="username" class="form-label">Username</label>
@@ -181,7 +222,7 @@
                                             </div>
                                         </form>
 
-                                        <div class="mt-4 pt-2 text-center">
+                                        <!-- <div class="mt-4 pt-2 text-center">
                                             <div class="signin-other-title">
                                                 <h5 class="font-size-14 mb-3 text-muted fw-medium">- Sign up using -</h5>
                                             </div>
@@ -206,7 +247,7 @@
                                                     </a>
                                                 </li>
                                             </ul>
-                                        </div>
+                                        </div> -->
 
                                         <div class="mt-5 text-center">
                                             <p class="text-muted mb-0">Already have an account ? <a

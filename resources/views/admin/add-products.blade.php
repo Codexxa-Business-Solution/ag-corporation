@@ -15,8 +15,8 @@
 @section('content')
 
     @component('components.breadcrumb')
-        @slot('li_1') Product @endslot
-        @slot('title') Product Details @endslot
+        @slot('li_1') Pump Catalog Selection @endslot
+        @slot('title')  Add Pump @endslot
     @endcomponent
 
     <div class="row">
@@ -48,7 +48,7 @@
                             <a class=" dropdown-toggle arrow-none" href="" 
                             id="topnav-dashboard" role="button" style="color:white;">
                             <!-- <i data-feather="home"></i> -->
-                            Add Product
+                            Add Pump
                             </a>
                         </button>
                     </form>

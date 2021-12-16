@@ -34,7 +34,7 @@
                                                 <input id="email" type="email"
                                                     class="form-control @error('email') is-invalid @enderror" name="email"
                                                     placeholder="Enter Username"
-                                                    value="{{ old('email', 'admin@themesbrand.com') }}" required
+                                                    value="{{ old('email', '') }}" required
                                                     autocomplete="email" autofocus>
 
                                                 @error('email')
@@ -59,7 +59,7 @@
                                                 <div class="input-group auth-pass-inputgroup">
                                                     <input id="password" type="password" placeholder="Enter Password"
                                                         class="form-control @error('password') is-invalid @enderror"
-                                                        name="password" value="{{ old('password', '123456') }}"
+                                                        name="password" value="{{ old('password', '') }}"
                                                         required autocomplete="current-password">
 
                                                     @error('password')
@@ -88,7 +88,7 @@
                                             </div>
                                         </form>
 
-                                        <div class="mt-4 pt-2 text-center">
+                                        <!-- <div class="mt-4 pt-2 text-center">
                                             <div class="signin-other-title">
                                                 <h5 class="font-size-14 mb-3 text-muted fw-medium">- Sign in with -</h5>
                                             </div>
@@ -113,7 +113,7 @@
                                                     </a>
                                                 </li>
                                             </ul>
-                                        </div>
+                                        </div> -->
 
                                         <div class="mt-5 text-center">
                                             <p class="text-muted mb-0">Don't have an account ? <a

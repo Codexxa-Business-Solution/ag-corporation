@@ -15,7 +15,7 @@
 @section('content')
 
     @component('components.breadcrumb')
-        @slot('li_1') Pump Catalog Selection @endslot
+        @slot('li_1') Incomer Selection @endslot
         @slot('title') Indication Details @endslot
     @endcomponent
 

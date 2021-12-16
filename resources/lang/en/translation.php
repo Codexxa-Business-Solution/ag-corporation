@@ -4,7 +4,7 @@ return [
     "Menu" => "Menu",
     "Dashboard" => "Dashboard",
     "Order_History" => "Order History",
-
+    // user
     "Quotation" => "Quotation",
     "Quotation_List" => "Quotation List",
     "Quotation_Detail" => "Quotation Detail",
@@ -16,16 +16,17 @@ return [
     "Get_A_Quote" => "Get A Quote",
 
     // admin
+    "Creation" => "Creation",
     "Apps_Admin" => "Apps Admin",
     "Product" => "Product",
-    "Add_Products" => "Add Products",
-    "Manage_Products" => "Manage Products",
+    "Add_Pump" => "Add Pump",
+    "Manage_Pump" => "Manage Pump",
     "No_Of_Pump" => "No Of Pump",
     "HP" => "HP",
     "Pump_Catalog_Selection" => "Pump Catalog Selection",
 
     "Panel_Incomer_Selection" => "Incomer Selection",
-    "Incomer" => "Incomer",
+    "Indication" => "Indication",
     "Volt_Meter" => "Volt Meter",
     "Ammeter" => "Ammeter",
     "SPP" => "SPP",
@@ -45,19 +46,22 @@ return [
     "Access" => "Access",
     "Mounting" => "Mounting",
     "Panel_Type" => "Panel Type",
-    // "" => "",
-    // "" => "",
-    // "" => "",
-    // "" => "",
-    // "" => "",
-    // "" => "",
-    // "" => "",
-    // "" => "",
+
+    "Customer_List" => "Customer List",
+    "Regional_List" => "Regional List",
+    "Employee_List" => "Employee List",
+
+    "Quotation_Request" => "Quotation Request",
+    "BOQ_Request" => "BOQ Request",
+    
+    "System_User" => "System User",
+    "Add_User" => "Add User",
+    "Add_Role" => "Add Role",
     // "" => "",
     // "" => "",
     // "" => "",
 
-    "Apps" => "Apps",
+    "Apps_User" => "Apps User",
     "Calendar" => "Calendar",
     "Chat" => "Chat",
     "Email" => "Email",

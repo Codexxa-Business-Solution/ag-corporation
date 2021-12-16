@@ -72,6 +72,7 @@
                                     <th>Make</th>
                                     <th>Unit</th>
                                     <th>QTY</th>
+                                    <!-- <th>Status</th> -->
                                     <!-- <th style="width: 150px;">Download Pdf</th> -->
                                     <!-- <th style="width: 90px;">Action</th> -->
                                 </tr>
@@ -93,7 +94,9 @@
                                     <td>L&T</td>
                                     <td>NO</td>
                                     <td>1</td>
-                                   
+                                    <!-- <td>
+                                       <div class="badge badge-soft-success font-size-12">Approve</div>
+                                    </td> -->
 
                                     
                                 </tr>
@@ -112,7 +115,7 @@
                                     <td>L&T</td>
                                     <td>SET</td>
                                     <td>1</td>
-                                   
+                                    
                                 </tr>
                                 <tr>
                                     <td>
@@ -129,7 +132,9 @@
                                     <td>L&T</td>
                                     <td>SET</td>
                                     <td>1</td>
-                                   
+                                    <!-- <td>
+                                    <div class="badge badge-soft-warning font-size-12">Pending</div>
+                                    </td>  -->
                                 </tr>
                                 <tr>
                                     <td>
@@ -148,7 +153,9 @@
                                     <td>L&T</td>
                                     <td>SET</td>
                                     <td>1</td>
-                                   
+                                    <!-- <td>
+                                       <div class="badge badge-soft-success font-size-12">Approve</div>
+                                    </td> -->
                                 </tr>
                                 
                               
