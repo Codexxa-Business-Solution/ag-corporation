@@ -24,14 +24,16 @@
                 <div class="card-body" style="background: linear-gradient(to bottom, #3a4084 0%, #0069a5 100%);">
                     <div class="row align-items-center">
                         <div class="col-7" >
-                            <span class="text-muted mb-3 lh-1 d-block text-truncate">No Of Quotation</span>
+                            <span class=" mb-3 lh-1 d-block text-truncate" style="color:#fff;font-size: 15px;
+                            font-weight: bold;">No Of Quotation</span>
                             <h4 class="mb-3" style="color:#fff;">
                                 <span class="counter-value" data-target="20">20</span>
                             </h4>
                         </div>
 
                         <div class="col-5">
-                            <div id="mini-chart1" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                            <img src="assets/images/no-of-quotation.png">
+                            <!-- <div id="mini-chart1" data-colors='["#5156be"]' class="apex-charts mb-2"></div> -->
                         </div>
                     </div>
                     <!-- <div class="text-nowrap">
@@ -49,13 +51,16 @@
                 <div class="card-body" style="background: linear-gradient(to bottom, #3a4084 0%, #0069a5 100%);">
                     <div class="row align-items-center">
                         <div class="col-7">
-                            <span class="text-muted mb-3 lh-1 d-block text-truncate">Amount Of<br> Quotation</span>
+                            <span class="mb-3 lh-1 d-block text-truncate" 
+                            style="color:#fff;font-size: 15px;font-weight: bold;">
+                            Amount Of<br> Quotation</span>
                             <h4 class="mb-3" style="color:#fff;">
                             ₹ <span class="counter-value" data-target="6258">0</span>k
                             </h4>
                         </div>
                         <div class="col-5">
-                            <div id="mini-chart2" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                            <img src="assets/images/ammount-of-quotation.png">
+                            <!-- <div id="mini-chart2" data-colors='["#5156be"]' class="apex-charts mb-2"></div> -->
                         </div>
                     </div>
                     <!-- <div class="text-nowrap">
@@ -73,13 +78,15 @@
                 <div class="card-body" style="background: linear-gradient(to bottom, #3a4084 0%, #0069a5 100%);">
                     <div class="row align-items-center">
                         <div class="col-7">
-                            <span class="text-muted mb-3 lh-1 d-block text-truncate">No Of BOQ</span>
+                            <span class="mb-3 lh-1 d-block text-truncate" 
+                            style="color:#fff;font-size: 15px;font-weight: bold;">No Of BOQ</span>
                             <h4 class="mb-3" style="color:#fff;">
                                 <span class="counter-value" data-target="4.32">10</span>
                             </h4>
                         </div>
                         <div class="col-5" >
-                            <div id="mini-chart3" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                            <img src="assets/images/no-of-boq.png">
+                            <!-- <div id="mini-chart3" data-colors='["#5156be"]' class="apex-charts mb-2"></div> -->
                         </div>
                     </div>
                     <!-- <div class="text-nowrap">
@@ -96,15 +103,18 @@
                 <!-- card body -->
                 <div class="card-body" style="background: linear-gradient(to bottom, #3a4084 0%, #0069a5 100%);">
                     <div class="row align-items-center">
-                        <div class="col-7">
-                            <span class="text-muted mb-3 lh-1 d-block text-truncate">Orders Amount</span>
+                        <div class="col-6">
+                            <span class=" mb-3 lh-1 d-block text-truncate" 
+                            style="color:#fff;font-size: 15px;font-weight: bold;">
+                            Orders Amount</span>
                             <h4 class="mb-3" style="color:#fff;">
                             ₹ <span class="counter-value" data-target="6258">2000</span>k
                             </h4>
                         </div>
-                        <div class="col-5">
-                            <div id="mini-chart2" data-colors='["#5156be"]'
-                             class="apex-charts mb-2"></div>
+                        <div class="col-6">
+                            <!-- <div id="mini-chart2" data-colors='["#5156be"]'
+                             class="apex-charts mb-2"></div> -->
+                             <img src="assets/images/orders-amount.png">
                         </div>
                     </div>
                     <!-- <div class="text-nowrap">

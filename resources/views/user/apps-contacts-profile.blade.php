@@ -9,7 +9,7 @@
 @slot('title') Profile @endslot
 @endcomponent
 <div class="row">
-    <div class="col-xl-9 col-lg-8">
+    <div class="col-xl-12 col-lg-12">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -22,15 +22,18 @@
                             </div>
                             <div class="flex-grow-1">
                                 <div>
-                                    <h5 class="font-size-16 mb-1">{{ Auth::user()->name }}</h5>
-                                    <p class="text-muted font-size-13">Full Stack Developer</p>
+                                    <h5 class="font-size-16 mb-1">Name : {{ Auth::user()->name }}</h5>
+                                    <h5 class="font-size-16 mb-1">Email : {{ Auth::user()->email }}</h5>
+                                    <h5 class="font-size-16 mb-1">Number :</h5>
+                                    <h5 class="font-size-16 mb-1">Address :</h5>
+                                    <!-- <p class="text-muted font-size-13">Full Stack Developer</p> -->
 
-                                    <div class="d-flex flex-wrap align-items-start gap-2 gap-lg-3 text-muted font-size-13">
+                                    <!-- <div class="d-flex flex-wrap align-items-start gap-2 gap-lg-3 text-muted font-size-13">
                                         <div><i class="mdi mdi-circle-medium me-1 text-success align-middle"></i>Development
                                         </div>
                                         <div><i class="mdi mdi-circle-medium me-1 text-success align-middle"></i>{{ Auth::user()->email }}
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -41,9 +44,9 @@
                                 <button type="button" class="btn btn-soft-light" data-bs-toggle="modal" data-bs-target="#updateProfileModal">
                                     Edit profile
                                 </button>
-                                <button type="button" class="btn btn-soft-light"><i class="me-1"></i> Message</button>
+                                <!-- <button type="button" class="btn btn-soft-light"><i class="me-1"></i> Message</button> -->
                             </div>
-                            <div>
+                            <!-- <div>
                                 <div class="dropdown">
                                     <button class="btn btn-link font-size-16 shadow-none text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="bx bx-dots-horizontal-rounded"></i>
@@ -54,12 +57,12 @@
                                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
 
-                <ul class="nav nav-tabs-custom card-header-tabs border-top mt-4" id="pills-tab" role="tablist">
+                <!-- <ul class="nav nav-tabs-custom card-header-tabs border-top mt-4" id="pills-tab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link px-3 active" data-bs-toggle="tab" href="#overview" role="tab">Overview</a>
                     </li>
@@ -69,13 +72,13 @@
                     <li class="nav-item">
                         <a class="nav-link px-3" data-bs-toggle="tab" href="#post" role="tab">Post</a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
             <!-- end card body -->
         </div>
         <!-- end card -->
 
-        <div class="tab-content">
+        <!-- <div class="tab-content">
             <div class="tab-pane active" id="overview" role="tabpanel">
                 <div class="card">
                     <div class="card-header">
@@ -142,9 +145,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end card body -->
+                    
                 </div>
-                <!-- end card -->
+               
 
                 <div class="card">
                     <div class="card-header">
@@ -213,7 +216,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- end col -->
+                               
 
                                 <div class="col-xl-4">
                                     <div class="card p-1 mb-xl-0">
@@ -267,10 +270,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- end card -->
+                                    
                                 </div>
-                                <!-- end col -->
-
+                                
                                 <div class="col-xl-4">
                                     <div class="card p-1 mb-sm-0">
                                         <div class="p-3">
@@ -323,18 +325,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- end card -->
+                                    
                                 </div>
-                                <!-- end col -->
+                                
                             </div>
-                            <!-- end row -->
+                           
                         </div>
                     </div>
-                    <!-- end card body -->
+                   
                 </div>
-                <!-- end card -->
+               
             </div>
-            <!-- end tab pane -->
+            
 
             <div class="tab-pane" id="about" role="tabpanel">
                 <div class="card">
@@ -398,11 +400,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end card body -->
+                    
                 </div>
-                <!-- end card -->
+               
             </div>
-            <!-- end tab pane -->
+          
 
             <div class="tab-pane" id="post" role="tabpanel">
                 <div class="card">
@@ -461,7 +463,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- end post -->
+                                    
 
                                     <hr class="my-5">
 
@@ -514,7 +516,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- end post -->
+                                    
 
                                     <hr class="my-5">
 
@@ -563,12 +565,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- end post -->
+                                    
                                 </div>
-                                <!-- end col -->
+                                
 
                             </div>
-                            <!-- end row -->
+                            
 
                             <div class="row g-0 mt-4">
                                 <div class="col-sm-6">
@@ -604,20 +606,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- end row -->
+                           
                         </div>
                     </div>
-                    <!-- end card body -->
+                 
                 </div>
-                <!-- end card -->
+               
             </div>
-            <!-- end tab pane -->
-        </div>
+           
+        </div> -->
         <!-- end tab content -->
     </div>
     <!-- end col -->
 
-    <div class="col-xl-3 col-lg-4">
+    <!-- <div class="col-xl-3 col-lg-4">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title mb-3">Skills</h5>
@@ -632,10 +634,9 @@
                     <a href="#" class="badge badge-soft-primary">Python</a>
                 </div>
             </div>
-            <!-- end card body -->
+           
         </div>
-        <!-- end card -->
-
+        
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title mb-3">Portfolio</h5>
@@ -652,9 +653,9 @@
                     </ul>
                 </div>
             </div>
-            <!-- end card body -->
+            
         </div>
-        <!-- end card -->
+       
 
         <div class="card">
             <div class="card-body">
@@ -704,11 +705,11 @@
                     </a>
                 </div>
             </div>
-            <!-- end card body -->
+            
         </div>
-        <!-- end card -->
-    </div>
-    <!-- end col -->
+        
+    </div> -->
+  
 </div>
 <!-- end row -->
 <div class="modal fade" id="updateProfileModal" tabindex="-1" aria-labelledby="updateProfileModalLabel" aria-hidden="true">
