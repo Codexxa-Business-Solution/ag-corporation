@@ -282,7 +282,7 @@
 
                 <!-- <li class="menu-title mt-2" data-key="t-components">@lang('translation.Elements')</li> -->
 
-                <!--<li>
+                <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="briefcase"></i>
                         <span data-key="t-components">@lang('translation.Components')</span>
@@ -368,11 +368,11 @@
                         <span data-key="t-charts">@lang('translation.Charts')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="charts-apex" data-key="t-apex-charts">@lang('translation.Apexcharts')</a></li>
-                        <li><a href="charts-echart" data-key="t-e-charts">@lang('translation.Echarts')</a></li>
-                        <li><a href="charts-chartjs" data-key="t-chartjs-charts">@lang('translation.Chartjs')</a></li>
-                        <li><a href="charts-knob" data-key="t-knob-charts">@lang('translation.Jquery_Knob')</a></li>
-                        <li><a href="charts-sparkline" data-key="t-sparkline-charts">@lang('translation.Sparkline')</a>
+                        <li><a href="user.charts-apex" data-key="t-apex-charts">@lang('translation.Apexcharts')</a></li>
+                        <li><a href="user.charts-echart" data-key="t-e-charts">@lang('translation.Echarts')</a></li>
+                        <li><a href="user.charts-chartjs" data-key="t-chartjs-charts">@lang('translation.Chartjs')</a></li>
+                        <li><a href="user.charts-knob" data-key="t-knob-charts">@lang('translation.Jquery_Knob')</a></li>
+                        <li><a href="user.charts-sparkline" data-key="t-sparkline-charts">@lang('translation.Sparkline')</a>
                         </li>
                     </ul>
                 </li>
