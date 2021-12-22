@@ -18,7 +18,7 @@
                             <div class="w-100">
                                 <div class="d-flex flex-column h-100">
                                     <div class="mb-4 mb-md-5 text-center">
-                                        <a href="index" class="d-block auth-logo">
+                                        <a href="index" class="d-block auth-logo" style="margin: -20px;">
                                             <img src="assets/images/ag-logo-new.jpeg" alt="" style="width: 165px;height: 112px;">
                                         </a>
                                     </div>
@@ -115,13 +115,13 @@
                                             </ul>
                                         </div> -->
 
-                                        <div class="mt-5 text-center">
+                                        <div class=" text-center">
                                             <p class="text-muted mb-0">Don't have an account ? <a
                                                     href="{{ route('register') }}" class="text-primary fw-semibold">
                                                     Signup now </a> </p>
                                         </div>
                                     </div>
-                                    <div class="mt-4 mt-md-5 text-center">
+                                    <div class=" mt-md-5 text-center" style="margin:-10px;">
                                         <script>
                                             document.write(new Date().getFullYear())
                                         </script> AG Corporation . Crafted with <i class="mdi mdi-heart text-danger"></i> by
