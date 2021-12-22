@@ -282,7 +282,7 @@
 
                 <!-- <li class="menu-title mt-2" data-key="t-components">@lang('translation.Elements')</li> -->
 
-                <li>
+                <!--<li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="briefcase"></i>
                         <span data-key="t-components">@lang('translation.Components')</span>
