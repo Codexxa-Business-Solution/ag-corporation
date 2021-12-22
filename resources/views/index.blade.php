@@ -281,7 +281,7 @@
                         <div class="card-body p-0">
                             <div id="carouselExampleCaptions" 
                             class="carousel slide text-center widget-carousel"
-                                data-bs-ride="carousel" style="margin-top: 271px;">
+                                data-bs-ride="carousel" >
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <!-- <div class="text-center p-4"> -->
