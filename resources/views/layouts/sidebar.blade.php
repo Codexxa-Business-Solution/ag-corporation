@@ -38,6 +38,17 @@
                     </a>
                 </li>
                 @endif
+
+
+                <!--  -->
+
+                <li>
+                    <a href="admin.component">  
+                        <i data-feather="box" style="font-size: 1.02rem;"></i>
+                        <span data-key="t-dashboard">@lang('translation.Component')</span>
+                    </a>
+                </li>
+                <!--  -->
                 @if(Auth::user()->role == "admin")
 
                 <li>
