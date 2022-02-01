@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title') @lang('translation.Company_Name') @endsection
+@section('title') @lang('translation.hp_products') @endsection
 
 @section('css')
 
@@ -15,27 +15,53 @@
 @section('content')
 
     @component('components.breadcrumb')
-        @slot('li_1') Pump Catalog Selection @endslot
-        @slot('title')  Add Pump @endslot
+        @slot('li_1') Components @endslot
+        @slot('title') Add Components @endslot
     @endcomponent
 
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
-                <!-- <div class="card-header">
-                    <h4 class="card-title">Sizing</h4>
-                    <p class="card-title-desc">Set heights using classes like <code>.form-control-lg</code> and
-                        <code>.form-control-sm</code>.</p>
-                </div> -->
+               
                 <div class="card-body">
                     <form>
                         <div class="mb-4">
-                            <label class="form-label" for="default-input">Pump Type </label>
+                            <label class="form-label" for="default-input">Component Name </label>
                             <input class="form-control" type="text" id="default-input" 
-                            placeholder="Enter Pump Type">
+                            placeholder="Enter Component Name">
                         </div>
                         <div class="mb-4">
-                            <label class="form-label" for="default-input">Select Components </label><br>
+                            <label class="form-label" for="default-input">Description </label>
+                            <input class="form-control" type="text" id="default-input" 
+                            placeholder="Enter Description">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" for="default-input">Price </label>
+                            <input class="form-control" type="number" id="default-input" 
+                            placeholder="Enter Price">
+                        </div>
+                      
+                        <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
+                            <a class=" dropdown-toggle arrow-none" href="" 
+                            id="topnav-dashboard" role="button" style="color:white;">
+                            <!-- <i data-feather="home"></i> -->
+                            Add Component
+                            </a>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+               
+                <div class="card-body">
+                    <form>
+                        <div class="mb-4">
+                            <label class="form-label" for="default-input">Component Name </label>
+                            <!-- <input class="form-control" type="text" id="default-input" 
+                            placeholder="Enter Component Name"> -->
+                            <br>
                             <div class="btn-group">
                             <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
@@ -65,17 +91,14 @@
                                 </form>
                             </div>
                         </div>
-                        </div>
-                        <!-- <div class="mb-4">
-                            <label class="form-label" for="default-input">No Of Pump </label>
-                            <input class="form-control" type="text" id="default-input" 
-                            placeholder="Enter No Of Pump">
-                        </div> -->
+                    </div>
+                       
+                      
                         <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
                             <a class=" dropdown-toggle arrow-none" href="" 
                             id="topnav-dashboard" role="button" style="color:white;">
                             <!-- <i data-feather="home"></i> -->
-                            Add Pump
+                            Group of Component
                             </a>
                         </button>
                     </form>
