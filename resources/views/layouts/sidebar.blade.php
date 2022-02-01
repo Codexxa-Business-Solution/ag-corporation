@@ -7,6 +7,7 @@
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
+
                 <li class="menu-title" data-key="t-menu">@lang('translation.Menu')</li>
 
                 <li>
@@ -15,23 +16,30 @@
                         <span data-key="t-dashboard">@lang('translation.Dashboard')</span>
                     </a>
                 </li>
-
                 
                 <!-- admin -->
                 
-                
+                @if(Auth::user()->role == "admin")
+
                 <li>
                     <a href="admin.quotation-request">
                         <i class="fas fa-hand-pointer" style="font-size: 1.02rem;"></i>
                         <span data-key="t-dashboard">@lang('translation.Quotation_Request')</span>
                     </a>
                 </li>
+                @endif
+
+                @if(Auth::user()->role == "admin")
+
                 <li>
                     <a href="admin.boq-request">
                         <i class="fas fa-hand-pointer" style="font-size: 1.02rem;"></i>
                         <span data-key="t-dashboard">@lang('translation.BOQ_Request')</span>
                     </a>
                 </li>
+                @endif
+                @if(Auth::user()->role == "admin")
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="grid"></i>
@@ -163,7 +171,11 @@
                     </ul>
 
                 </li>
+        @endif
+
                 <!-- user -->
+                @if(Auth::user()->role == "user")
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="grid"></i>
@@ -230,12 +242,18 @@
                         </li>
                     </ul>
                 </li>
+                @endif
+                @if(Auth::user()->role == "user")
+
                 <li>
                     <a href="user.order-history">
                         <i class="fas fa-history" style="font-size: 1.02rem;"></i>
                         <span data-key="t-dashboard">@lang('translation.Order_History')</span>
                     </a>
                 </li>
+                @endif
+                @if(Auth::user()->role == "user")
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="users"></i>
@@ -253,6 +271,7 @@
                        
                     </ul>
                 </li>
+                @endif
 
                 <!-- <li>
                     <a href="javascript: void(0);" class="has-arrow">

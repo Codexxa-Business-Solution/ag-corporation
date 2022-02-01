@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Passwordaaaaa') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -109,11 +109,11 @@
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="example-text-input" class="form-label">Customer Name </label>
-                                                <input class="form-control" type="text" placeholder="Name" id="example-text-input">
+                                                <input class="form-control" name ="customer_name" type="text" placeholder="Name" id="example-text-input">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="example-tel-input" class="form-label">Contact Person</label>
-                                                <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="example-tel-input">
+                                                <input class="form-control" type="tel" name ="mobile" placeholder="1-(555)-555-5555" id="example-tel-input">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="useremail" class="form-label">Email</label>
@@ -134,7 +134,7 @@
                                                     <div class="col-md-5">
                                                         <div class="mb-3">
                                                             <label class="form-label" for="validationCustom03">City</label>
-                                                            <input type="text" class="form-control" id="validationCustom03" placeholder="City"
+                                                            <input type="text" name="city" class="form-control" id="validationCustom03" placeholder="City"
                                                                 required>
                                                             <div class="invalid-feedback">
                                                                 Please provide a valid city.
@@ -144,7 +144,7 @@
                                                     <div class="col-md-4">
                                                         <div class="mb-3">
                                                             <label class="form-label" for="validationCustom04">State</label>
-                                                            <input type="text" class="form-control" id="validationCustom04" placeholder="State"
+                                                            <input type="text" class="form-control" name="state" id="validationCustom04" placeholder="State"
                                                                 required>
                                                             <div class="invalid-feedback">
                                                                 Please provide a valid state.
@@ -154,7 +154,7 @@
                                                     <div class="col-md-3">
                                                         <div class="mb-3">
                                                             <label class="form-label" for="validationCustom05">Zip</label>
-                                                            <input type="text" class="form-control" id="validationCustom05" 
+                                                            <input type="text" name="zip" class="form-control" id="validationCustom05" 
                                                             placeholder="Zip"
                                                                 required>
                                                             <div class="invalid-feedback">
@@ -200,7 +200,7 @@
                                                 <label for="userpassword" class="form-label">Confirm Password</label>
                                                 <input id="password" type="password" placeholder="Enter Confirm Password"
                                                     class="form-control @error('password') is-invalid @enderror"
-                                                    name="password" required autocomplete="new-password">
+                                                    name="password_confirmation" required autocomplete="new-password">
 
                                                 @error('password')
                                                     <span class="invalid-feedback" role="alert">
