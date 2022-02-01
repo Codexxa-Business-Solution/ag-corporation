@@ -13,6 +13,7 @@ return [
     "BOQ_List" => "BOQ List",
     "BOQ_Detail" => "BOQ Detail",
 
+    "Component" => "Component",
     "Get_A_Quote" => "Get A Quote",
 
     // admin
