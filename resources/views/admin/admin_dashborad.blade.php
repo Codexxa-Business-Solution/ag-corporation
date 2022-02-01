@@ -4,11 +4,8 @@
 
 @section('css')
 
-    <!-- <link href="{{ URL::asset('assets/libs/jquery-vectormap/jquery-vectormap.min.css') }}" rel="stylesheet"
-        type="text/css" /> -->
-
-        <!-- plugin css -->
-<link href="{{ URL::asset('/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ URL::asset('assets/libs/jquery-vectormap/jquery-vectormap.min.css') }}" rel="stylesheet"
+        type="text/css" />
 
 @endsection
 
@@ -26,23 +23,21 @@
                 <!-- card body -->
                 <div class="card-body" style="background: linear-gradient(to bottom, #3a4084 0%, #0069a5 100%);box-shadow: 10px 10px 8px #dad3d3;">
                     <div class="row align-items-center">
-                        <div class="col-7">
-                            <span class="mb-3 lh-1 d-block text-truncate" style="color:#fff;font-size: 15px;
-                            font-weight: bold;"> Amount Of<br> Quotation</span>
+                        <div class="col-7" >
+                            <span class=" mb-3 lh-1 d-block text-truncate" style="color:#fff;font-size: 15px;
+                            font-weight: bold;">No Of Quotation</span>
                             <h4 class="mb-3" style="color:#fff;">
-                                ₹ <span class="counter-value" data-target="865.2">20</span>k
+                                <span class="counter-value" data-target="20">20</span>
                             </h4>
                         </div>
+
                         <div class="col-5" style="text-align: center;">
-                            <img src="assets/images/ammount-of-quotation.png" width= "65px">    
-                        </div>
-                        <div class="col-6" style="display:none;">
-                        
-                            <div id="mini-chart1" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                            <img src="assets/images/no-of-quotation.png"     width= "45px">
+                            <!-- <div id="mini-chart1" data-colors='["#5156be"]' class="apex-charts mb-2"></div> -->
                         </div>
                     </div>
                     <!-- <div class="text-nowrap">
-                        <span class="badge bg-soft-success text-success">+₹ 20.9k</span>
+                        <span class="badge bg-soft-success text-success">-29 Trades</span>
                         <span class="ms-1 text-muted font-size-13">Since last week</span>
                     </div> -->
                 </div><!-- end card body -->
@@ -56,23 +51,20 @@
                 <div class="card-body" style="background: linear-gradient(to bottom, #3a4084 0%, #0069a5 100%);box-shadow: 10px 10px 8px #dad3d3;">
                     <div class="row align-items-center">
                         <div class="col-7">
-                            <span class="mb-3 lh-1 d-block text-truncate" style="color:#fff;font-size: 15px;
-                            font-weight: bold;">No Of Quotation</span>
+                            <span class="mb-3 lh-1 d-block text-truncate" 
+                            style="color:#fff;font-size: 15px;font-weight: bold;">
+                            Amount Of<br> Quotation</span>
                             <h4 class="mb-3" style="color:#fff;">
-                                <span class="counter-value" data-target="6258">20</span>
+                            ₹ <span class="counter-value" data-target="6258">0</span>k
                             </h4>
                         </div>
                         <div class="col-5" style="text-align: center;">
-                            <img src="assets/images/no-of-quotation.png"  width= "45px">
-                            
+                            <img src="assets/images/ammount-of-quotation.png" width= "65px">
                             <!-- <div id="mini-chart2" data-colors='["#5156be"]' class="apex-charts mb-2"></div> -->
-                        </div>
-                        <div class="col-6" style="display:none;">
-                            <div id="mini-chart2" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
                         </div>
                     </div>
                     <!-- <div class="text-nowrap">
-                        <span class="badge bg-soft-danger text-danger">-29 Trades</span>
+                        <span class="badge bg-soft-danger text-danger">+₹20.9k </span>
                         <span class="ms-1 text-muted font-size-13">Since last week</span>
                     </div> -->
                 </div><!-- end card body -->
@@ -86,22 +78,19 @@
                 <div class="card-body" style="background: linear-gradient(to bottom, #3a4084 0%, #0069a5 100%);box-shadow: 10px 10px 8px #dad3d3;">
                     <div class="row align-items-center">
                         <div class="col-7">
-                            <span class="mb-3 lh-1 d-block text-truncate" style="color:#fff;font-size: 15px;
-                            font-weight: bold;">Orders<br> Amount</span>
+                            <span class="mb-3 lh-1 d-block text-truncate" 
+                            style="color:#fff;font-size: 15px;font-weight: bold;">No Of BOQ</span>
                             <h4 class="mb-3" style="color:#fff;">
-                                ₹ <span class="counter-value" data-target="4.32">0</span>M
+                                <span class="counter-value" data-target="4.32">10</span>
                             </h4>
                         </div>
                         <div class="col-5" style="text-align: center;">
-                           
-                             <img src="assets/images/orders-amount.png" width= "65px">
-                        </div>
-                        <div class="col-6" style="display:none;">
-                            <div id="mini-chart3" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                            <img src="assets/images/no-of-boq.png" width= "45px">
+                            <!-- <div id="mini-chart3" data-colors='["#5156be"]' class="apex-charts mb-2"></div> -->
                         </div>
                     </div>
                     <!-- <div class="text-nowrap">
-                        <span class="badge bg-soft-success text-success">+ ₹ 2.8k</span>
+                        <span class="badge bg-soft-success text-success">-19 Trades</span>
                         <span class="ms-1 text-muted font-size-13">Since last week</span>
                     </div> -->
                 </div><!-- end card body -->
@@ -114,39 +103,38 @@
                 <!-- card body -->
                 <div class="card-body" style="background: linear-gradient(to bottom, #3a4084 0%, #0069a5 100%);box-shadow: 10px 10px 8px #dad3d3;">
                     <div class="row align-items-center">
-                        <div class="col-7">
-                            <span class="mb-3 lh-1 d-block text-truncate" style="color:#fff;font-size: 15px;
-                            font-weight: bold;">No Of BOQ</span>
+                        <div class="col-6">
+                            <span class=" mb-3 lh-1 d-block text-truncate" 
+                            style="color:#fff;font-size: 15px;font-weight: bold;">
+                            Orders<br> Amount</span>
                             <h4 class="mb-3" style="color:#fff;">
-                                <span class="counter-value" data-target="12.57">0</span>%
+                            ₹ <span class="counter-value" data-target="6258">2000</span>k
                             </h4>
                         </div>
-                        <div class="col-5" style="text-align: center;">
-                            <img src="assets/images/no-of-boq.png" width= "45px">
-                            <!-- <div id="mini-chart3" data-colors='["#5156be"]' class="apex-charts mb-2"></div> -->
-                        </div>
-                        <div class="col-6" style="display:none;">
-                            <div id="mini-chart4" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                        <div class="col-6" style="text-align: center;">
+                            <!-- <div id="mini-chart2" data-colors='["#5156be"]'
+                             class="apex-charts mb-2"></div> -->
+                             <img src="assets/images/orders-amount.png" width= "65px">
                         </div>
                     </div>
                     <!-- <div class="text-nowrap">
-                        <span class="badge bg-soft-success text-success">+2.95%</span>
+                        <span class="badge bg-soft-danger text-danger">+₹20.9k </span>
                         <span class="ms-1 text-muted font-size-13">Since last week</span>
                     </div> -->
                 </div><!-- end card body -->
             </div><!-- end card -->
-        </div><!-- end col -->    
+        </div><!-- end col -->
     </div><!-- end row-->
 
     <div class="row">
         <div class="col-xl-6">
             <!-- card -->
-            <div class="card" style="height: 306px;">
+            <div class="card card-h-100">
                 <!-- card body -->
                 <div class="card-body" style="">
                     <div class="d-flex flex-wrap align-items-center mb-4">
                         <h5 class="card-title me-2">Quotation </h5>
-                        <!-- <div class="ms-auto">
+                        <div class="ms-auto">
                             <div>
                                 <button type="button" class="btn btn-soft-secondary btn-sm">
                                     ALL
@@ -161,53 +149,34 @@
                                     1Y
                                 </button>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
 
                     <div class="row align-items-center">
                         <div class="col-sm">
-                        <div class="text-center" dir="ltr">
-                                <!-- <h5 class="font-size-14 mb-3">Cursor mode</h5> -->
-                                <input class="knob" data-width="200" data-cursor="true" 
-                                data-fgcolor="#2ab57d" value="29" readonly style="    color: rgb(8 89 128);">
+                            <div id="wallet-balance" data-colors='["#777aca", "#5156be", "#a8aada"]' class="apex-charts">
                             </div>
-                            <!-- <div id="wallet-balance" data-colors='["#777aca", "#5156be","#2ab57d", "#a8aada"]' 
-                            class="apex-charts">
-                            </div> -->
-                           
                         </div>
                         <div class="col-sm align-self-center">
                             <div class="mt-4 mt-sm-0">
                                 <div>
                                     <p class="mb-2"><i
-                                        class="mdi mdi-circle align-middle font-size-10 me-2 text-success"></i>
-                                         East -<span style="font-weight:bold;"> 0.4412</span>
+                                            class="mdi mdi-circle align-middle font-size-10 me-2 text-success"></i> Bitcoin
                                     </p>
-                                    <!-- <h6></h6> -->
-                                    <!-- <h6>0.4412 BTC = <span class="text-muted font-size-14 fw-normal">₹  4025.32</span></h6> -->
+                                    <h6>0.4412 BTC = <span class="text-muted font-size-14 fw-normal">$ 4025.32</span></h6>
                                 </div>
 
                                 <div class="mt-4 pt-2">
                                     <p class="mb-2"><i
-                                            class="mdi mdi-circle align-middle font-size-10 me-2 text-primary"></i> 
-                                        West -<span style="font-weight:bold;"> 4.5701</span>
+                                            class="mdi mdi-circle align-middle font-size-10 me-2 text-primary"></i> Ethereum
                                     </p>
-                                    <!-- <h6>4.5701</h6> -->
-                                    <!-- <h6>4.5701 ETH = <span class="text-muted font-size-14 fw-normal">₹  1123.64</span></h6> -->
+                                    <h6>4.5701 ETH = <span class="text-muted font-size-14 fw-normal">$ 1123.64</span></h6>
                                 </div>
 
                                 <div class="mt-4 pt-2">
                                     <p class="mb-2"><i class="mdi mdi-circle align-middle font-size-10 me-2 text-info"></i>
-                                    North -<span style="font-weight:bold;"> 35.3811</span></p>
-                                    <!-- <h6>35.3811</h6> -->
-                                    <!-- <h6>35.3811 LTC = <span class="text-muted font-size-14 fw-normal">₹  2263.09</span></h6> -->
-                                </div>
-                                
-                                <div class="mt-4 pt-2">
-                                    <p class="mb-2"><i class="mdi mdi-circle align-middle font-size-10 me-2 text-info"></i>
-                                    South -<span style="font-weight:bold;"> 35.3811</span></p>
-                                    <!-- <h6>35.3811</h6> -->
-                                    <!-- <h6>35.3811 LTC = <span class="text-muted font-size-14 fw-normal">₹  2263.09</span></h6> -->
+                                        Litecoin</p>
+                                    <h6>35.3811 LTC = <span class="text-muted font-size-14 fw-normal">$ 2263.09</span></h6>
                                 </div>
                             </div>
                         </div>
@@ -217,10 +186,12 @@
             <!-- end card -->
         </div>
         <!-- end col -->
-        <!--<div class="col-xl-6">
+        <div class="col-xl-6">
             <div class="row">
                 <div class="col-xl-12">
+                    <!-- card -->
                     <div class="card card-h-100">
+                        <!-- card body -->
                         <div class="card-body">
                             <div class="d-flex flex-wrap align-items-center mb-4">
                                 <h5 class="card-title me-2">Invested Overview</h5>
@@ -244,7 +215,7 @@
                                 <div class="col-sm align-self-center">
                                     <div class="mt-4 mt-sm-0">
                                         <p class="mb-1">Invested Amount</p>
-                                        <h4>₹  6134.39</h4>
+                                        <h4>$ 6134.39</h4>
 
                                         <p class="text-muted mb-4"> + 0.0012.23 ( 0.2 % ) <i
                                                 class="mdi mdi-arrow-up ms-1 text-success"></i></p>
@@ -253,13 +224,13 @@
                                             <div class="col-6">
                                                 <div>
                                                     <p class="mb-2 text-muted text-uppercase font-size-11">Income</p>
-                                                    <h5 class="fw-medium">₹  2632.46</h5>
+                                                    <h5 class="fw-medium">$ 2632.46</h5>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div>
                                                     <p class="mb-2 text-muted text-uppercase font-size-11">Expenses</p>
-                                                    <h5 class="fw-medium">-₹  924.38</h5>
+                                                    <h5 class="fw-medium">-$ 924.38</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -273,20 +244,18 @@
                             </div>
                         </div>
                     </div>
-                </div>-->
+                </div>
                 <!-- end col -->
 
-                <div class="col-xl-6">
-                    <div class="card bg-light text-white shadow-primary" style="height: 306px;">
+                <!-- <div class="col-xl-4">
+                    <div class="card bg-primary text-white shadow-primary card-h-100">
                         <div class="card-body p-0">
-                            <div id="carouselExampleCaptions" 
-                            class="carousel slide text-center widget-carousel"
-                                data-bs-ride="carousel" >
+                            <div id="carouselExampleCaptions" class="carousel slide text-center widget-carousel"
+                                data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <!-- <div class="text-center p-4"> -->
-                                            <img src="assets/images/fire-pumps.jpg" style="width: 605px;height: 302px;">
-                                            <!-- <i class="mdi mdi-bitcoin widget-box-1-icon"></i>
+                                        <div class="text-center p-4">
+                                            <i class="mdi mdi-bitcoin widget-box-1-icon"></i>
                                             <div class="avatar-md m-auto">
                                                 <span
                                                     class="avatar-title rounded-circle bg-soft-light text-white font-size-24">
@@ -299,12 +268,11 @@
                                                 over the Bitcoin past week has dampened Bitcoin basics
                                                 sentiment for bitcoin. </p>
                                             <button type="button" class="btn btn-light btn-sm">View details <i
-                                                    class="mdi mdi-arrow-right ms-1"></i></button> -->
-                                        <!-- </div> -->
+                                                    class="mdi mdi-arrow-right ms-1"></i></button>
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
-                                    <img src="assets/images/electrical-services.jpg" style="width: 605px;height: 302px;">
-                                        <!-- <div class="text-center p-4">
+                                        <div class="text-center p-4">
                                             <i class="mdi mdi-ethereum widget-box-1-icon"></i>
                                             <div class="avatar-md m-auto">
                                                 <span
@@ -319,11 +287,10 @@
                                                 sentiment for bitcoin. </p>
                                             <button type="button" class="btn btn-light btn-sm">View details <i
                                                     class="mdi mdi-arrow-right ms-1"></i></button>
-                                        </div> -->
+                                        </div>
                                     </div>
-                                    <!-- <div class="carousel-item">
-                                    <img src="assets/images/auth-bg.jpg"> -->
-                                        <!-- <div class="text-center p-4">
+                                    <div class="carousel-item">
+                                        <div class="text-center p-4">
                                             <i class="mdi mdi-litecoin widget-box-1-icon"></i>
                                             <div class="avatar-md m-auto">
                                                 <span
@@ -338,19 +305,19 @@
                                                 sentiment for bitcoin. </p>
                                             <button type="button" class="btn btn-light btn-sm">View details <i
                                                     class="mdi mdi-arrow-right ms-1"></i></button>
-                                        </div> -->
-                                    <!-- </div> -->
+                                        </div>
+                                    </div>
                                    
                                 </div>
                                
 
-                                <div class="carousel-indicators carousel-indicators-rounded" style="display: none;">
+                                <div class="carousel-indicators carousel-indicators-rounded">
                                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
                                         class="active" aria-current="true" aria-label="Slide 1"></button>
                                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
                                         aria-label="Slide 2"></button>
-                                    <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                                        aria-label="Slide 3"></button> -->
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
                                 </div>
                                
                             </div>
@@ -359,7 +326,7 @@
                         
                     </div>
                    
-                </div> 
+                </div> -->
                 
             </div>
            
@@ -585,7 +552,7 @@
                             <div class="float-end ms-2">
                                 <h5 class="font-size-14"><i
                                         class="bx bx-wallet text-primary font-size-16 align-middle me-1"></i> <a href="#!"
-                                        class="text-reset text-decoration-underline">₹ 4335.23</a></h5>
+                                        class="text-reset text-decoration-underline">$4335.23</a></h5>
                             </div>
                             <h5 class="font-size-14 mb-4">Buy Coins</h5>
                             <div>
@@ -614,13 +581,13 @@
 
                                     <div class="input-group mb-3">
                                         <label class="input-group-text">Price</label>
-                                        <input type="text" class="form-control" placeholder="₹ 58,245">
-                                        <label class="input-group-text">₹ </label>
+                                        <input type="text" class="form-control" placeholder="$58,245">
+                                        <label class="input-group-text">$</label>
                                     </div>
 
                                     <div class="input-group mb-3">
                                         <label class="input-group-text">Total</label>
-                                        <input type="text" class="form-control" placeholder="₹ 36,854.25">
+                                        <input type="text" class="form-control" placeholder="$36,854.25">
                                     </div>
                                 </div>
 
@@ -634,7 +601,7 @@
                             <div class="float-end ms-2">
                                 <h5 class="font-size-14"><i
                                         class="bx bx-wallet text-primary font-size-16 align-middle me-1"></i> <a href="#!"
-                                        class="text-reset text-decoration-underline">₹ 4235.23</a></h5>
+                                        class="text-reset text-decoration-underline">$4235.23</a></h5>
                             </div>
                             <h5 class="font-size-14 mb-4">Sell Coins</h5>
 
@@ -662,14 +629,14 @@
 
                                         <label class="input-group-text">Price</label>
 
-                                        <input type="text" class="form-control" placeholder="₹ 23,754.25">
+                                        <input type="text" class="form-control" placeholder="$23,754.25">
 
-                                        <label class="input-group-text">₹ </label>
+                                        <label class="input-group-text">$</label>
                                     </div>
 
                                     <div class="input-group mb-3">
                                         <label class="input-group-text">Total</label>
-                                        <input type="text" class="form-control" placeholder="₹ 6,852.41">
+                                        <input type="text" class="form-control" placeholder="$6,852.41">
                                     </div>
                                 </div>
 
@@ -743,7 +710,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 125.20</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$125.20</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -772,7 +739,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 112.34</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$112.34</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -801,7 +768,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 94.22</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$94.22</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -830,7 +797,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 84.32</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$84.32</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -859,7 +826,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 145.80</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$145.80</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -888,7 +855,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 125.20</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$125.20</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -917,7 +884,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 112.34</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$112.34</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -954,7 +921,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 125.20</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$125.20</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -983,7 +950,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 145.80</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$145.80</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1012,7 +979,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 94.22</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$94.22</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1041,7 +1008,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 112.34</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$112.34</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1070,7 +1037,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 84.32</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$84.32</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1099,7 +1066,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 112.34</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$112.34</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1128,7 +1095,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 125.20</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$125.20</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1167,7 +1134,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 112.34</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$112.34</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1196,7 +1163,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 125.20</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$125.20</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1225,7 +1192,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 145.80</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$145.80</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1254,7 +1221,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 112.34</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$112.34</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1283,7 +1250,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 94.22</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$94.22</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1312,7 +1279,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 84.32</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$84.32</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1343,7 +1310,7 @@
 
                                             <td>
                                                 <div class="text-end">
-                                                    <h5 class="font-size-14 text-muted mb-0">₹ 125.20</h5>
+                                                    <h5 class="font-size-14 text-muted mb-0">$125.20</h5>
                                                     <p class="text-muted mb-0 font-size-12">Amount</p>
                                                 </div>
                                             </td>
@@ -1395,7 +1362,7 @@
                                         </div>
                                         <div class="flex-shrink-0 text-end me-3">
                                             <h6 class="mb-1">+0.5 BTC</h6>
-                                            <div class="font-size-13">₹ 178.53</div>
+                                            <div class="font-size-13">$178.53</div>
                                         </div>
 
                                         <div class="flex-shrink-0 text-end">
@@ -1433,7 +1400,7 @@
                                         </div>
                                         <div class="flex-shrink-0 text-end me-3">
                                             <h6 class="mb-1">-20.5 ETH</h6>
-                                            <div class="font-size-13">₹ 3541.45</div>
+                                            <div class="font-size-13">$3541.45</div>
                                         </div>
 
                                         <div class="flex-shrink-0 text-end">
@@ -1471,7 +1438,7 @@
                                         </div>
                                         <div class="flex-shrink-0 text-end me-3">
                                             <h6 class="mb-1">+0.5 BTC</h6>
-                                            <div class="font-size-13">₹ 5791.45</div>
+                                            <div class="font-size-13">$5791.45</div>
                                         </div>
 
                                         <div class="flex-shrink-0 text-end">
@@ -1509,7 +1476,7 @@
                                         </div>
                                         <div class="flex-shrink-0 text-end me-3">
                                             <h6 class="mb-1">-1.5 LTC</h6>
-                                            <div class="font-size-13">₹ 5791.45</div>
+                                            <div class="font-size-13">$5791.45</div>
                                         </div>
 
                                         <div class="flex-shrink-0 text-end">
@@ -1548,7 +1515,7 @@
                                         </div>
                                         <div class="flex-shrink-0 text-end me-3">
                                             <h6 class="mb-1">+0.5 BTC</h6>
-                                            <div class="font-size-13">₹ 5791.45</div>
+                                            <div class="font-size-13">$5791.45</div>
                                         </div>
 
                                         <div class="flex-shrink-0 text-end">
@@ -1586,7 +1553,7 @@
                                         </div>
                                         <div class="flex-shrink-0 text-end me-3">
                                             <h6 class="mb-1">+.55 LTC</h6>
-                                            <div class="font-size-13">₹ 91.45</div>
+                                            <div class="font-size-13">$91.45</div>
                                         </div>
 
                                         <div class="flex-shrink-0 text-end">
@@ -1625,16 +1592,9 @@
 
     <!-- Plugins js-->
     <script src="{{ URL::asset('assets/libs/jquery-vectormap/jquery-vectormap.min.js') }}"></script>
-     <script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+    {{-- <script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script> --}}
     <!-- dashboard init -->
     <script src="{{ URL::asset('assets/js/pages/dashboard.init.js') }}"></script>
     {{-- <script src="{{ URL::asset('assets/js/app.min.js') }}"></script> --}}
 
-     <!-- jquery-knob plugin  -->
-     <script src="{{ URL::asset('/assets/libs/jquery-knob/jquery-knob.min.js') }}"></script>
-    <!-- jquery-knob init -->
-    <script src="{{ URL::asset('/assets/js/pages/jquery-knob.init.js') }}"></script>
-
-
- 
 @endsection

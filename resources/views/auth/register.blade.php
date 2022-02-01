@@ -95,7 +95,7 @@
                             <div class="w-100">
                                 <div class="d-flex flex-column h-100">
                                     <div class="mb-4 mb-md-5 text-center">
-                                        <a href="index" class="d-block auth-logo">
+                                        <a href="index" class="d-block auth-logo" style="margin: -29px;">
                                         <img src="assets/images/ag-logo-new.jpeg" alt="" style="width: 165px;height: 112px;">
                                         </a>
                                     </div>
@@ -249,14 +249,14 @@
                                             </ul>
                                         </div> -->
 
-                                        <div class="mt-5 text-center">
+                                        <div class="text-center">
                                             <p class="text-muted mb-0">Already have an account ? <a
                                                     href=" @if (Route::has('login')){{ route('login') }} @endif" class="text-primary fw-semibold"> Login
                                                 </a>
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="mt-4 mt-md-5 text-center">
+                                    <div class="mt-md-5 text-center"  style="margin:-10px;">
                                         <script>
                                             document.write(new Date().getFullYear())
                                         </script> AG Corporation . Crafted with <i class="mdi mdi-heart text-danger"></i> by
@@ -269,7 +269,7 @@
                     </div>
                     <!-- end col -->
                     <div class="col-xxl-9 col-lg-8 col-md-7">
-                        <div class="auth-bg pt-md-5 p-4 d-flex">
+                        <div class="auth-bg pt-md-5 p-4 d-flex" style="position: fixed;">
                             <div class="bg-overlay bg-primary"></div>
                             <ul class="bg-bubbles">
                                 <li></li>

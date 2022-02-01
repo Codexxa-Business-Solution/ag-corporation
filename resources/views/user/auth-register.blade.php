@@ -28,7 +28,15 @@
                                             <p class="text-muted mt-2">Get your free AG Corporation account now.</p>
                                         </div>
                                         <form class="needs-validation mt-4 pt-2" novalidate action="index">
+                                        <div class="mb-3">
+                                                <label for="example-text-input" class="form-label">Customer Name </label>
+                                                <input class="form-control" type="text" placeholder="Name" id="example-text-input">
+                                            </div>
                                             <div class="mb-3">
+                                                <label for="example-tel-input" class="form-label">Contact Person</label>
+                                                <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="example-tel-input">
+                                            </div>   
+                                        <div class="mb-3">
                                                 <label for="useremail" class="form-label">Email</label>
                                                 <input type="email" class="form-control" id="useremail"
                                                     placeholder="Enter email" required>
@@ -36,7 +44,39 @@
                                                     Please Enter Email
                                                 </div>
                                             </div>
-
+                                            <div class="row">
+                                                    <div class="col-md-5">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="validationCustom03">City</label>
+                                                            <input type="text" class="form-control" id="validationCustom03" placeholder="City"
+                                                                required>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid city.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="validationCustom04">State</label>
+                                                            <input type="text" class="form-control" id="validationCustom04" placeholder="State"
+                                                                required>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid state.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="validationCustom05">Zip</label>
+                                                            <input type="text" class="form-control" id="validationCustom05" 
+                                                            placeholder="Zip"
+                                                                required>
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid zip.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             <div class="mb-3">
                                                 <label for="username" class="form-label">Username</label>
                                                 <input type="text" class="form-control" id="username"
@@ -52,6 +92,15 @@
                                                     placeholder="Enter password" required>
                                                 <div class="invalid-feedback">
                                                     Please Enter Password
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="userpassword" class="form-label">Confirm Password</label>
+                                                <input id="password" type="password"class="form-control"  placeholder="Enter Confirm Password"
+                                                    name="password" required >
+
+                                                <div class="invalid-feedback">
+                                                    Please Enter Confirm Password
                                                 </div>
                                             </div>
                                             <div class="mb-4">
@@ -92,7 +141,7 @@
                                         </div>
 
                                         <div class="mt-5 text-center">
-                                            <p class="text-muted mb-0">Already have an account ? <a href="auth-login"
+                                            <p class="text-muted mb-0">Already have an account ? <a href="user.auth-login"
                                                     class="text-primary fw-semibold"> Login </a> </p>
                                         </div>
                                     </div>
