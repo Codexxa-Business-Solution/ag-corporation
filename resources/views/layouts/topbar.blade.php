@@ -118,7 +118,7 @@
 
                 </div>
             </div> -->
-            
+            @if(Auth::user()->role == "user")
             <div class="dropdown d-none d-sm-inline-block">
                 <button type="button" class="btn header-item">
                     <ul class="navbar-nav">
@@ -134,6 +134,7 @@
                     </ul>
                 </button>
             </div>
+           @endif
             <div class="dropdown d-none d-sm-inline-block">
                 <button type="button" class="btn header-item" id="mode-setting-btn">
                     <i data-feather="moon" class="icon-lg layout-mode-dark"></i>

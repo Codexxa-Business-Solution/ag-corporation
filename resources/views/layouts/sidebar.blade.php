@@ -38,16 +38,46 @@
                     </a>
                 </li>
                 @endif
+                
+                @if(Auth::user()->role == "admin")
+
+               <!-- <li>
+                    <a href="admin.product-master">
+                        <i class="fas fa-hand-pointer" style="font-size: 1.02rem;"></i>
+                        <span data-key="t-dashboard">@lang('translation.Product_Master')</span>
+                    </a>
+                </li>-->
+              	<li>
+                  	<a href="javascript: void(0);" class="has-arrow">
+                       <i class="fas fa-hand-pointer" style="font-size: 1.02rem;"></i>
+                       <span data-key="t-invoices">@lang('translation.Product_Master')</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="admin.product-master"
+                                        data-key="t-invoice-list">@lang('translation.Product_Master_list')</a></li>
+                                <li><a href="admin.manage-product-category"
+                                        data-key="t-invoice-list">@lang('translation.add_category')</a></li>
+                                <li><a href="admin.manage-product-subCategory"
+                                        data-key="t-invoice-list">@lang('translation.add_sub_category')</a></li>
+                                <li><a href="admin.manage-product-manufacture"
+                                        data-key="t-invoice-detail">@lang('translation.add_manufacturing_name')</a></li>
+                               <li><a href="admin.manage-units"
+                                        data-key="t-invoice-detail">@lang('translation.add_unit')</a></li>
+                     </ul>
+                 </li>
+                @endif
 
 
                 <!--  -->
-
+ 				@if(Auth::user()->role == "admin")
                 <li>
                     <a href="admin.component">  
                         <i data-feather="box" style="font-size: 1.02rem;"></i>
                         <span data-key="t-dashboard">@lang('translation.Component')</span>
                     </a>
                 </li>
+               @endif
+              
                 <!--  -->
                 @if(Auth::user()->role == "admin")
 

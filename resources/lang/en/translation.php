@@ -25,7 +25,13 @@ return [
     "No_Of_Pump" => "No Of Pump",
     "HP" => "HP",
     "Pump_Catalog_Selection" => "Pump Catalog Selection",
-
+	"Product_Master" => "Product Master",
+  	"Product_Master_list" => "Product Master List",
+  	"add_category" => "Add Category",
+  	"add_sub_category" => "Add Sub Category",
+  	"add_manufacturing_name" => "Add Manufacturing Name",
+  	"add_unit" => "Add Unit",
+  
     "Panel_Incomer_Selection" => "Incomer Selection",
     "Indication" => "Indication",
     "Volt_Meter" => "Volt Meter",
