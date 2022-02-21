@@ -24,20 +24,23 @@
             <div class="card">
                
                 <div class="card-body">
-                    <form>
+                    <form action="{{ route('manufacture.store') }}" method="POST">
+                    @csrf
+                   
                         <div class="mb-4">
                             <label class="form-label" for="default-input">Manufacturing Name </label>
-                            <input class="form-control" type="text" id="default-input" 
+                            <input class="form-control" type="text" name="manufacturing"id="default-input" 
                             placeholder="Enter Manufacturing Name">
                         </div>
                       
-                        <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
+                        <!-- <button type="submit" class="btn btn-info btn-rounded waves-effect waves-light"> 
                             <a class=" dropdown-toggle arrow-none" href="" 
                             id="topnav-dashboard" role="button" style="color:white;">
-                            <!-- <i data-feather="home"></i> -->
                             Add Manufacture
                             </a>
-                        </button>
+                        </button> -->
+                        <button type="submit" class="btn btn-default"> Add Manufacture</button>
+
                     </form>
                 </div>
             </div>
@@ -63,8 +66,10 @@
                                     <th style="width: 90px;">Action</th>
                                 </tr>
                             </thead>
+                            @foreach($manufacture as $manufactures) 
+
                             <tbody>
-                            
+
                                 <tr>
                                     <td>
                                         <div class="form-check font-size-16">
@@ -73,10 +78,12 @@
                                         </div>
                                     </td>
 
-                                    <td><a href="javascript: void(0);" class="text-dark fw-medium">#15</a> </td>
-                                   
+                                    <!-- <td><a href="javascript: void(0);" class="text-dark fw-medium">#15</a> </td> -->
+                                    <td>{{$loop->iteration}}</td>
+
                                    <td>
-                                      AGC
+                                   {{ $manufactures->manufacturing }}
+
                                     </td>
                                  
                                     <td>
@@ -87,8 +94,22 @@
                                                 <i class="bx bx-dots-horizontal-rounded"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                            <form action="{{ route('manufacture.destroy',$manufactures->id) }}" method="POST">
+
+                                                <!-- <li><a class="dropdown-item" href="{{ route('manufacture.edit',$manufactures->id) }}">Edit</a></li>
+                                                <li><a class="dropdown-item" href="{{ route('manufacture.destroy',$manufactures->id) }}">Delete</a></li> -->
+
+                                                <a class="btn btn-primary" href="{{ route('manufacture.edit',$manufactures->id) }}">Edit</a>
+
+
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                                               
+
+                        
+                             </form>
                                             </ul>
                                         </div>
                                     </td>
@@ -96,6 +117,8 @@
                                 
                                 
                             </tbody>
+                            @endforeach
+
                         </table>
                     </div>
                     <!-- end table responsive -->

@@ -53,15 +53,15 @@
                        <span data-key="t-invoices">@lang('translation.Product_Master')</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="admin.product-master"
+                                <li><a href="{{ route('product.index') }}"
                                         data-key="t-invoice-list">@lang('translation.Product_Master_list')</a></li>
-                                <li><a href="admin.manage-product-category"
+                                <li><a href="{{ route('category.index') }}"
                                         data-key="t-invoice-list">@lang('translation.add_category')</a></li>
                                 <li><a href="admin.manage-product-subCategory"
                                         data-key="t-invoice-list">@lang('translation.add_sub_category')</a></li>
-                                <li><a href="admin.manage-product-manufacture"
+                                <li><a href="{{ route('manufacture.index') }}"
                                         data-key="t-invoice-detail">@lang('translation.add_manufacturing_name')</a></li>
-                               <li><a href="admin.manage-units"
+                               <li><a href="{{ route('unit.index') }}"
                                         data-key="t-invoice-detail">@lang('translation.add_unit')</a></li>
                      </ul>
                  </li>

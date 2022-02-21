@@ -22,22 +22,31 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
-               
+            @if(Session::has('success'))
+        <div class="alert alert-success">
+            {{ Session::get('success') }}
+            @php
+                Session::forget('success');
+            @endphp
+        </div>
+        @endif
                 <div class="card-body">
-                    <form>
+                    <form action="{{ route('category.store') }}" method="POST">
+                    @csrf
                         <div class="mb-4">
                             <label class="form-label" for="default-input">Category Name </label>
-                            <input class="form-control" type="text" id="default-input" 
-                            placeholder="Enter Category Name">
+                            <input class="form-control" type="text" name="category_name" id="default-input" 
+                            placeholder="Enter Category Name" Required>
                         </div>
                       
-                        <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
+                        <button type="submit" class="btn btn-info btn-rounded waves-effect waves-light"> 
                             <a class=" dropdown-toggle arrow-none" href="" 
                             id="topnav-dashboard" role="button" style="color:white;">
                             <!-- <i data-feather="home"></i> -->
                             Add Category
                             </a>
                         </button>
+                        
                     </form>
                 </div>
             </div>
@@ -63,6 +72,8 @@
                                     <th style="width: 90px;">Action</th>
                                 </tr>
                             </thead>
+                            @foreach($category as $categories) 
+
                             <tbody>
                             
                                 <tr>
@@ -73,15 +84,17 @@
                                         </div>
                                     </td>
 
-                                    <td><a href="javascript: void(0);" class="text-dark fw-medium">#15</a> </td>
-                                   
+                                    <!-- <td><a href="javascript: void(0);" class="text-dark fw-medium">#15</a> </td> -->
+                                    <td>{{$loop->iteration}}</td>
+
                                    <td>
-                                   Cable
+                                   {{ $categories->category_name }}
+
                                     </td>
                                  
                                     <td>
                                         <div class="dropdown">
-                                            <button
+                                            <!-- <button
                                                 class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
                                                 type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="bx bx-dots-horizontal-rounded"></i>
@@ -89,13 +102,28 @@
                                             <ul class="dropdown-menu dropdown-menu-end">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
                                                 <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
+                                            </ul> -->
+
+                                            <form action="{{ route('category.destroy',$categories->id) }}" method="POST">
+
+                        <a class="btn btn-primary" href="{{ route('category.edit',$categories->id) }}">Edit</a>
+
+                        @csrf
+                        @method('DELETE')
+
+                        <button type="submit" class="btn btn-danger">Delete</button>
+
+
+
+                        </form>
                                         </div>
                                     </td>
                                 </tr>
                                 
                                 
                             </tbody>
+                            @endforeach
+
                         </table>
                     </div>
                     <!-- end table responsive -->

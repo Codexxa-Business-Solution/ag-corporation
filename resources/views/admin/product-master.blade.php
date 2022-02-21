@@ -24,6 +24,14 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
+                @if(Session::has('success'))
+        <div class="alert alert-success">
+            {{ Session::get('success') }}
+            @php
+                Session::forget('success');
+            @endphp
+        </div>
+        @endif
                     <div class="row">
                         <div class="col-sm">
                             <!-- <div class="mb-4">
@@ -35,18 +43,22 @@
                             <div class="d-flex align-items-center gap-1 mb-4">
                                 <div class="mb-4">
                                     <button type="button" class="btn btn-light waves-effect waves-light">
-                                        <a href="admin.add-product-master" data-key="t-invoice-list">
+                                        <a href="{{ route('product.create') }}" data-key="t-invoice-list">
                                         <i class="bx bx-plus me-1"></i> Add Product</a>
                                     </button>
                                 </div> 
                             </div>
                         </div>
                     </div>
+
+                    
                     <!-- end row -->
 
                     <div class="table-responsive">
+
                         <table class="table align-middle datatable dt-responsive table-check nowrap"
                             style="border-collapse: collapse; border-spacing: 0 8px; width: 100%;">
+
                             <thead>
                                 <tr class="bg-transparent">
                                     <th style="width: 30px;">
@@ -55,7 +67,7 @@
                                             <label class="form-check-label" for="checkAll"></label>
                                         </div>
                                     </th>
-                                    <th > ID</th>
+                                    <th > SR  NO</th>
                                     <th>Item Name</th>
                                     <th>Units</th> 
                                     <th>Category</th> 
@@ -68,6 +80,8 @@
                                     
                                     <th >Action</th>
                                 </tr>
+                                @foreach($product as $products) 
+
                             </thead>
                             <tbody>
                             
@@ -78,39 +92,44 @@
                                             <label class="form-check-label"></label>
                                         </div>
                                     </td>
+                                    <td>{{$loop->iteration}}</td>
 
-                                    <td><a href="javascript: void(0);" class="text-dark fw-medium">#MN0215</a> </td>
                                     <td>
-                                        61025
+                                    {{ $products->item_name	}}
+
                                     </td>
                                     <td>
-                                       KG
+                                    {{ $products->units}}
+
                                     </td>
                                    <td>
-                                     Cable
+                                   {{ $products->category_name}}
                                     </td>
                                    <td>
-                                     Ammeter
+                                   {{ $products->subcategory}}
                                     </td>
                                    <td>
-                                     AGC
+                                   {{ $products->manf_name}}
                                     </td>
                                    <td>
-                                     1.55
+                                   {{ $products->purchase_rate}}
+
                                     </td>
                                    <td>
-                                      20%
+                                   {{ $products->purchase_discount}}
+%
                                     </td>
                                    <td>
-                                      2600
+                                   {{ $products->actual_rate}}
+
                                     </td>
                                    <td >
-                                     1.0-1-CU-GR-FLX-LV, 1 SQMM, 1CORE, COPPER,<br> GRAY COLOUR, FLEXIBLE, LV, CABLE.
+                                   {{ $products->discription}}
                                     </td>
                                    
                                     <td>
                                         <div class="dropdown">
-                                            <button
+                                            <!-- <button
                                                 class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
                                                 type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="bx bx-dots-horizontal-rounded"></i>
@@ -118,14 +137,27 @@
                                             <ul class="dropdown-menu dropdown-menu-end">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
                                                 <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
+                                            </ul> -->
+
+                                            <form action="{{ route('product.destroy',$products->id) }}" method="POST">
+
+<a class="btn btn-primary" href="{{ route('product.edit',$products->id) }}">Edit</a>
+
+
+@csrf
+@method('DELETE')
+
+<button type="submit" class="btn btn-danger">Delete</button>
                                         </div>
                                     </td>
                                 </tr>
                                 
                                 
                             </tbody>
+                            @endforeach
+
                         </table>
+
                     </div>
                     <!-- end table responsive -->
                 </div>

@@ -22,23 +22,38 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
-               
+            @if(Session::has('success'))
+        <div class="alert alert-success">
+            {{ Session::get('success') }}
+            @php
+                Session::forget('success');
+            @endphp
+        </div>
+        @endif
+            
                 <div class="card-body">
-                    <form>
+               
+                    <form action="{{ route('unit.store') }}" method="POST">
+                    @csrf
+                   
+
                         <div class="mb-4">
                             <label class="form-label" for="default-input">Units  </label>
-                            <input class="form-control" type="text" id="default-input" 
-                            placeholder="Enter Units">
+                            <input class="form-control" type="text"  name="units" id="default-input" 
+                            placeholder="Enter Units" required>
                         </div>
                       
-                        <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
+                        <!-- <button type="submit" class="btn btn-info btn-rounded waves-effect waves-light"> 
                             <a class=" dropdown-toggle arrow-none" href="" 
                             id="topnav-dashboard" role="button" style="color:white;">
-                            <!-- <i data-feather="home"></i> -->
                             Add Units
                             </a>
-                        </button>
+                        </button> -->
+                        <button type="submit" class="btn btn-default"> Add Units</button>
+
                     </form>
+
+
                 </div>
             </div>
         </div>
@@ -58,11 +73,15 @@
                                             <label class="form-check-label" for="checkAll"></label>
                                         </div>
                                     </th>
+                                    
+
                                     <th style="width: 80px;"> ID</th>
                                     <th>Units </th> 
                                     <th style="width: 90px;">Action</th>
                                 </tr>
                             </thead>
+                            @foreach($unit as $units) 
+
                             <tbody>
                             
                                 <tr>
@@ -73,10 +92,13 @@
                                         </div>
                                     </td>
 
-                                    <td><a href="javascript: void(0);" class="text-dark fw-medium">#15</a> </td>
+                                    <!-- <td><a href="javascript: void(0);" class="text-dark fw-medium"></a> </td> -->
                                    
+                                    <td>{{$loop->iteration}}</td>
+
                                    <td>
-                                      KG
+                                   {{ $units->units }}
+
                                     </td>
                                  
                                     <td>
@@ -87,8 +109,19 @@
                                                 <i class="bx bx-dots-horizontal-rounded"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                
+                                                <form action="{{ route('unit.destroy',$units->id) }}" method="POST">
+
+                                        <!-- <a class="btn btn-primary" href="{{ route('unit.edit',$units->id) }}">Edit</a> -->
+                        <a class="btn btn-primary" href="{{ route('unit.edit',$units->id) }}">Edit</a>
+
+
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                        
+                             </form>
                                             </ul>
                                         </div>
                                     </td>
@@ -96,6 +129,8 @@
                                 
                                 
                             </tbody>
+                            @endforeach
+
                         </table>
                     </div>
                     <!-- end table responsive -->
