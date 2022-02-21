@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UnitController;
+use App\Http\Controllers\ManufactureController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +20,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('unit', UnitController::class);
+Route::resource('category', CategoryController::class);
+Route::resource('product', ProductController::class);
+
+Route::resource('manufacture', ManufactureController::class);
+
 
 Auth::routes();
 
