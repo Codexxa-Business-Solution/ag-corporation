@@ -6,6 +6,7 @@ use App\Http\Controllers\UnitController;
 use App\Http\Controllers\ManufactureController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HpController;
 
 
 
@@ -21,6 +22,7 @@ use App\Http\Controllers\ProductController;
 |
 */
 Route::resource('unit', UnitController::class);
+Route::resource('hp', HpController::class);
 Route::resource('category', CategoryController::class);
 Route::resource('product', ProductController::class);
 

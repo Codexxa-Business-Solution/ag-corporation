@@ -112,7 +112,7 @@
                                         data-key="t-invoice-list">@lang('translation.Add_Pump')</a></li>
                                 <li><a href="admin.manage_products"
                                         data-key="t-invoice-list">@lang('translation.Manage_Pump')</a></li>
-                                <li><a href="admin.hp_products"
+                                <li><a href="{{ route('hp.index') }}"
                                         data-key="t-invoice-list">@lang('translation.HP')</a></li>
                                
                             </ul>
