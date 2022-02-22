@@ -16,41 +16,54 @@
 
     @component('components.breadcrumb')
         @slot('li_1') Incomer Selection @endslot
-        @slot('title') Indication Details @endslot
+        @slot('title') Edit Ammeter  @endslot
     @endcomponent
 
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
-                @if(Session::has('success'))
-                <div class="alert alert-success">
-                    {{ Session::get('success') }}
-                    @php
-                        Session::forget('success');
-                    @endphp
-                </div>
-                @endif
+            @if(Session::has('success'))
+            <div class="alert alert-success">
+                {{ Session::get('success') }}
+                @php
+                    Session::forget('success');
+                @endphp
+            </div>  
+            @endif
+            
                 <div class="card-body">
-                    <form action="{{ route('indication.store') }}" method="POST">
-                    @csrf
+               
+                    <form action="{{ route('ammeter.update',$ammeter->id) }}" method="POST">
+
+                    @method('PATCH')
+                      @csrf
+                   
                         <div class="mb-4">
-                            <label class="form-label" for="default-input">Indication </label>
-                            <input class="form-control" type="text" name="indication_name" id="default-input" 
-                            placeholder="Enter Indication">
+                            <label class="form-label" for="default-input"> Ammeter  </label>
+                            <input class="form-control" type="text" value="{{ $ammeter->ammeters_name }}" 
+                            name="ammeters_name" id="default-input" placeholder="Enter Ammeter" required>
                         </div>
                       
-                        <!-- <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
+                        <!-- <button type="submit" class="btn btn-info btn-rounded waves-effect waves-light"> 
                             <a class=" dropdown-toggle arrow-none" href="" 
                             id="topnav-dashboard" role="button" style="color:white;">
-                            Add Indication
+                            Add Units
                             </a>
                         </button> -->
-                        <button type="submit"  class="btn btn-primary"> Add Indication</button>
+                        <button type="submit" class="btn btn-primary"> Edit Ammeter</button>
+
                     </form>
+
+                        
                 </div>
             </div>
         </div>
+   
+           
+        </div>
+        <!-- end col -->
     </div>
+    <!-- end row -->
 
     @endsection
 

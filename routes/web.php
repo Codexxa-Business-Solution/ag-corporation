@@ -7,9 +7,10 @@ use App\Http\Controllers\ManufactureController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HpController;
-
-
-
+use App\Http\Controllers\IndicationController;
+use App\Http\Controllers\VoltmeterController;
+use App\Http\Controllers\AmmeterController;
+use App\Http\Controllers\SwitchMakeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,12 @@ use App\Http\Controllers\HpController;
 */
 Route::resource('unit', UnitController::class);
 Route::resource('hp', HpController::class);
+Route::resource('indication', IndicationController::class);
+Route::resource('voltmeter', VoltmeterController::class);
+Route::resource('ammeter', AmmeterController::class);
+Route::resource('switchmake', SwitchMakeController::class);
+
+
 Route::resource('category', CategoryController::class);
 Route::resource('product', ProductController::class);
 

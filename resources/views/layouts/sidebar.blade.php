@@ -122,11 +122,11 @@
                                 <span data-key="t-invoices">@lang('translation.Panel_Incomer_Selection')</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="admin.incomer-products"
+                                <li><a href="{{ route('indication.index') }}"
                                         data-key="t-invoice-list">@lang('translation.Indication')</a></li>
-                                <li><a href="admin.volt-meter"
+                                <li><a href="{{ route('voltmeter.index') }}"
                                         data-key="t-invoice-list">@lang('translation.Volt_Meter')</a></li>
-                                <li><a href="admin.ammeter"
+                                <li><a href="{{ route('ammeter.index') }}"
                                         data-key="t-invoice-list">@lang('translation.Ammeter')</a></li>
                                 <li><a href="admin.SPP"
                                         data-key="t-invoice-detail">@lang('translation.SPP')</a></li>
@@ -134,7 +134,7 @@
                                         data-key="t-invoice-detail">@lang('translation.Hooter')</a></li>
                                 <li><a href="admin.feeder-ammeter"
                                         data-key="t-invoice-detail">@lang('translation.Feeder_Ammeter')</a></li>
-                                <li><a href="admin.switch-make"
+                                <li><a href="{{ route('switchmake.index') }}"
                                         data-key="t-invoice-detail">@lang('translation.Switch_Make')</a></li>
                             </ul>
                         </li>
