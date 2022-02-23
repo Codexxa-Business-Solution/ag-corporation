@@ -143,13 +143,13 @@
                                 <span data-key="t-invoices">@lang('translation.Section_1')</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="admin.panel-location"
+                                <li><a href="{{ route('panellocation.index') }}"
                                         data-key="t-invoice-list">@lang('translation.Panel_Location')</a></li>
-                                <li><a href="admin.panel-colour"
+                                <li><a href="{{ route('panelcolour.index') }}"
                                         data-key="t-invoice-list">@lang('translation.Panel_Colour')</a></li>
-                                <li><a href="admin.busbar"
+                                <li><a href="{{ route('busbar.index') }}"
                                         data-key="t-invoice-list">@lang('translation.Busbar')</a></li>
-                                <li><a href="admin.cable-entry"
+                                <li><a href="{{ route('cabletype.index') }}"
                                         data-key="t-invoice-detail">@lang('translation.Cable_Entry')</a></li>
                                 <li><a href="admin.type1-type2"
                                         data-key="t-invoice-detail">@lang('translation.Type1_Type2')</a></li>
@@ -161,13 +161,13 @@
                                 <span data-key="t-invoices">@lang('translation.Section_2')</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="admin.cable-make"
+                                <li><a href="{{ route('cablemaketype.index') }}"
                                         data-key="t-invoice-list">@lang('translation.Cable_Make')</a></li>
-                                <li><a href="admin.access"
+                                <li><a href="{{ route('access.index') }}"
                                         data-key="t-invoice-list">@lang('translation.Access')</a></li>
-                                <li><a href="admin.mounting"
+                                <li><a href="{{ route('mounting.index') }}"
                                         data-key="t-invoice-list">@lang('translation.Mounting')</a></li>
-                                <li><a href="admin.panel-type"
+                                <li><a href="{{ route('paneltype.index') }}"
                                         data-key="t-invoice-detail">@lang('translation.Panel_Type')</a></li>
                                
                             </ul>

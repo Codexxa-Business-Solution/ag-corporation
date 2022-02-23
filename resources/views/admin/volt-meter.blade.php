@@ -119,7 +119,7 @@
                                     
                             </tbody>
                             @endforeach
- 
+  
                         </table>
                     </div>
                     <!-- end table responsive -->

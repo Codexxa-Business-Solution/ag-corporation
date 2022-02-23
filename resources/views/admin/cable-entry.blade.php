@@ -35,8 +35,8 @@
                             <div class="d-flex align-items-center gap-1 mb-4">
                             <div class="mb-4">
                                 <button type="button" class="btn btn-light waves-effect waves-light">
-                                    <a href="admin.add-cable-entry" data-key="t-invoice-list">
-                                    <i class="bx bx-plus me-1"></i> Add Cable Entry</a>
+                                    <a href="{{ route('cabletype.create') }}" data-key="t-invoice-list">
+                                    <i class="bx bx-plus me-1"></i> Add Cable Type</a>
                                 </button>
                             </div>
                             </div>
@@ -61,38 +61,45 @@
                                     <th style="width: 90px;">Action</th>
                                 </tr>
                             </thead>
+                            @foreach($cabletype as $cabletypes) 
                             <tbody>
-                            
-                                <tr>
-                                    <td>
-                                        <div class="form-check font-size-16">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-label"></label>
-                                        </div>
-                                    </td>
 
-                                    <td><a href="javascript: void(0);" class="text-dark fw-medium">#MN0215</a> </td>
-                                    <td>
-                                    BOTTOM
-                                    </td>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check font-size-16">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label"></label>
+                                            </div>
+                                        </td>
 
+                                        <!-- <td><a href="javascript: void(0);" class="text-dark fw-medium"></a> </td> -->
+                                    
+                                        <td>{{$loop->iteration}}</td>
+
+                                    <td>
+                                    {{ $cabletypes->cabletypes_name }}
+
+                                    </td>
+                                    
                                     <td>
                                         <div class="dropdown">
-                                            <button
-                                                class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
-                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
+                                                    
+                                            <form action="{{ route('cabletype.destroy',$cabletypes->id) }}" method="POST">
+                                                <a class="btn btn-primary" href="{{ route('cabletype.edit',$cabletypes->id) }}">Edit</a>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+
+                                            </form>
+                                                <!-- </ul> -->
                                         </div>
                                     </td>
-                                </tr>
-                                
-                                
+                                    
+                                    </tr>
+                                    
                             </tbody>
+                            @endforeach
+                            
                         </table>
                     </div>
                     <!-- end table responsive -->

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\SwitchMake;
-class SwitchMakeController extends Controller
+use App\Models\PanelLocation;
+class PanelLocationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +13,9 @@ class SwitchMakeController extends Controller
      */
     public function index()
     {
-        $switchmakes = SwitchMake::all();
+        $panellocations = PanelLocation::all();
       
-        return view('admin.switch-make', ['switchmake' => $switchmakes]);
+        return view('admin.panel-location', ['panellocation' => $panellocations]);
     }
 
     /**
@@ -25,7 +25,7 @@ class SwitchMakeController extends Controller
      */
     public function create()
     {
-        return view('admin.add-switch-make');
+        return view('admin.add-panel-location');
     }
 
     /**
@@ -37,12 +37,12 @@ class SwitchMakeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'switchmakes_name' => 'required',
+            'panellocations_name' => 'required',
             
         ]);
 
-        SwitchMake::create($request->all());
-        return redirect('switchmake')->with('success', 'SwitchMake has been added');
+        PanelLocation::create($request->all());
+        return redirect('panellocation')->with('success', 'Panel Location has been added');
     }
 
     /**
@@ -53,19 +53,19 @@ class SwitchMakeController extends Controller
      */
     public function show($id)
     {
-        $switchmakes = SwitchMake::all();
-        return view('admin.switch-make', ['switchmake' => $switchmakes]);
+        $panellocations = PanelLocation::all();
+        return view('admin.panel-location', ['voltmeter' => $panellocations]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     *   * @param  \App\Models\SwitchMake  $SwitchMake
+     *   * @param  \App\Models\PanelLocation  $panellocation
      * @return \Illuminate\Http\Response
      */
-    public function edit(Switchmake $switchmake)
+    public function edit(Panellocation $panellocation)
     {
-        return view('admin.edit-switch-make', compact('switchmake'));
+        return view('admin.edit-panellocation', compact('panellocation'));
     }
 
     /**
@@ -79,33 +79,33 @@ class SwitchMakeController extends Controller
     {
         $request->validate([
            
-            'switchmakes_name' => 'required',
+            'panellocations_name' => 'required',
             'id' => 'id'
 
         ]);
 
 
-        $switchmakes = SwitchMake::find($id);
-        $switchmakes->switchmakes_name = $request->get('switchmakes_name');
+        $panellocations = PanelLocation::find($id);
+        $panellocations->panellocations_name = $request->get('panellocations_name');
 
-        $switchmakes->update();
+        $panellocations->update();
 
 
-        $switchmakes = SwitchMake::all();
+        $panellocations = PanelLocation::all();
       
 
-        return redirect('/switchmake')->with('success', 'SwitchMake updated successfully');
+        return redirect('/panellocation')->with('success', 'Panel Location updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-    *   * @param  \App\Models\SwitchMake  $SwitchMake
+     *   * @param  \App\Models\PanelLocation  $panellocation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Switchmake $switchmake)
+    public function destroy(Panellocation $panellocation)
     {
-        $switchmake->delete();
-        return redirect('/switchmake')->with('success', 'Switchmake deleted successfully');
+        $panellocation->delete();
+        return redirect('/panellocation')->with('success', 'Panel Location deleted successfully');
     }
 }

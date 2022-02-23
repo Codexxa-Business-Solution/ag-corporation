@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Voltmeter;
-class VoltMeterController extends Controller
+use App\Models\PanelColour;
+class PanelColourController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() 
+    public function index()
     {
-        $voltmeters = Voltmeter::all();
+        $panelcolours = PanelColour::all();
       
-        return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
+        return view('admin.panel-colour', ['panelcolour' => $panelcolours]);
     }
 
     /**
@@ -25,7 +25,7 @@ class VoltMeterController extends Controller
      */
     public function create()
     {
-        return view('admin.add-volt-meter');
+        return view('admin.add-panel-colour');
     }
 
     /**
@@ -37,12 +37,12 @@ class VoltMeterController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'voltmeters_name' => 'required',
+            'panelcolours_name' => 'required',
             
         ]);
 
-        Voltmeter::create($request->all());
-        return redirect('voltmeter')->with('success', 'Voltmeter has been added');
+        PanelColour::create($request->all());
+        return redirect('panelcolour')->with('success', 'Panel Colour has been added');
     }
 
     /**
@@ -53,19 +53,19 @@ class VoltMeterController extends Controller
      */
     public function show($id)
     {
-        $voltmeters = Voltmeter::all();
-        return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
+        $panelcolours = PanelColour::all();
+        return view('admin.panel-colour', ['voltmeter' => $panelcolours]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     *   * @param  \App\Models\Voltmeter  $Voltmeters
+     *   * @param  \App\Models\PanelColour  $panelcolour
      * @return \Illuminate\Http\Response
      */
-    public function edit(Voltmeter $voltmeter)
+    public function edit(Panelcolour $panelcolour)
     {
-        return view('admin.edit-voltmeter', compact('voltmeter'));
+        return view('admin.edit-panelcolour', compact('panelcolour'));
     }
 
     /**
@@ -79,33 +79,33 @@ class VoltMeterController extends Controller
     {
         $request->validate([
            
-            'voltmeters_name' => 'required',
+            'panelcolours_name' => 'required',
             'id' => 'id'
 
         ]);
 
 
-        $voltmeters = Voltmeter::find($id);
-        $voltmeters->voltmeters_name = $request->get('voltmeters_name');
+        $panelcolours = PanelColour::find($id);
+        $panelcolours->panelcolours_name = $request->get('panelcolours_name');
 
-        $voltmeters->update();
+        $panelcolours->update();
 
 
-        $voltmeters = Voltmeter::all();
+        $panelcolours = PanelColour::all();
       
 
-        return redirect('/voltmeter')->with('success', 'Voltmeter updated successfully');
+        return redirect('/panelcolour')->with('success', 'Panel Colour updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-    *   * @param  \App\Models\Voltmeter  $hps
+     *   * @param  \App\Models\PanelColour  $panelcolour
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Voltmeter $voltmeter)
+    public function destroy(Panelcolour $panelcolour)
     {
-        $voltmeter->delete();
-        return redirect('/voltmeter')->with('success', 'Voltmeter deleted successfully');
+        $panelcolour->delete();
+        return redirect('/panelcolour')->with('success', 'Panel Colour deleted successfully');
     }
 }

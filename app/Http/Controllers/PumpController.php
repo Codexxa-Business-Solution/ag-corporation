@@ -122,6 +122,6 @@ class PumpController extends Controller
     {
 
            $unit->delete();
-           return redirect('/unit')->with('success', 'Unit deleted successfulyl');
+           return redirect('/unit')->with('success', 'Unit deleted successfully');
     }
 }

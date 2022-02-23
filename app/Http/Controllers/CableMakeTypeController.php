@@ -3,19 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Voltmeter;
-class VoltMeterController extends Controller
+use App\Models\CableMakeType;
+
+class CableMakeTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() 
+    public function index()
     {
-        $voltmeters = Voltmeter::all();
+        $cablemaketypes = Cablemaketype::all();
       
-        return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
+        return view('admin.cable-make', ['cablemaketype' => $cablemaketypes]);
     }
 
     /**
@@ -25,7 +26,7 @@ class VoltMeterController extends Controller
      */
     public function create()
     {
-        return view('admin.add-volt-meter');
+        return view('admin.add-cable-make');
     }
 
     /**
@@ -37,12 +38,12 @@ class VoltMeterController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'voltmeters_name' => 'required',
+            'cablemake_name' => 'required',
             
         ]);
 
-        Voltmeter::create($request->all());
-        return redirect('voltmeter')->with('success', 'Voltmeter has been added');
+        Cablemaketype::create($request->all());
+        return redirect('cablemaketype')->with('success', 'Cable Make Type has been added');
     }
 
     /**
@@ -53,19 +54,19 @@ class VoltMeterController extends Controller
      */
     public function show($id)
     {
-        $voltmeters = Voltmeter::all();
-        return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
+        $cablemaketypes = Cablemaketype::all();
+        return view('admin.cable-make', ['cablemaketype' => $cablemaketypes]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     *   * @param  \App\Models\Voltmeter  $Voltmeters
+     *   * @param  \App\Models\CableMakeType  $cablemaketype
      * @return \Illuminate\Http\Response
      */
-    public function edit(Voltmeter $voltmeter)
+    public function edit(CableMakeType $cablemaketype)
     {
-        return view('admin.edit-voltmeter', compact('voltmeter'));
+        return view('admin.edit-cablemaketype', compact('cablemaketype'));
     }
 
     /**
@@ -79,33 +80,33 @@ class VoltMeterController extends Controller
     {
         $request->validate([
            
-            'voltmeters_name' => 'required',
+            'cablemake_name' => 'required',
             'id' => 'id'
 
         ]);
 
 
-        $voltmeters = Voltmeter::find($id);
-        $voltmeters->voltmeters_name = $request->get('voltmeters_name');
+        $cablemaketypes = Cablemaketype::find($id);
+        $cablemaketypes->cablemake_name = $request->get('cablemake_name');
 
-        $voltmeters->update();
+        $cablemaketypes->update();
 
 
-        $voltmeters = Voltmeter::all();
+        $cablemaketypes = Cablemaketype::all();
       
 
-        return redirect('/voltmeter')->with('success', 'Voltmeter updated successfully');
+        return redirect('/cablemaketype')->with('success', 'Cable Make Type updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-    *   * @param  \App\Models\Voltmeter  $hps
+     *   * @param  \App\Models\CableMakeType  $cablemaketype
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Voltmeter $voltmeter)
+    public function destroy(CableMakeType $cablemaketype)
     {
-        $voltmeter->delete();
-        return redirect('/voltmeter')->with('success', 'Voltmeter deleted successfully');
+        $cablemaketype->delete();
+        return redirect('/cablemaketype')->with('success', 'Cable Make Type deleted successfully');
     }
 }

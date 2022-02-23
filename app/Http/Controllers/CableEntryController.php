@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Voltmeter;
-class VoltMeterController extends Controller
+use App\Models\CableEntry;
+class CableEntryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() 
+    public function index()
     {
-        $voltmeters = Voltmeter::all();
+        $cabletypes = CableEntry::all();
       
-        return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
+        return view('admin.cable-entry', ['cabletype' => $cabletypes]);
     }
 
     /**
@@ -25,7 +25,7 @@ class VoltMeterController extends Controller
      */
     public function create()
     {
-        return view('admin.add-volt-meter');
+        return view('admin.add-cable-entry');
     }
 
     /**
@@ -37,12 +37,12 @@ class VoltMeterController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'voltmeters_name' => 'required',
+            'cabletypes_name' => 'required',
             
         ]);
 
-        Voltmeter::create($request->all());
-        return redirect('voltmeter')->with('success', 'Voltmeter has been added');
+        CableEntry::create($request->all());
+        return redirect('cabletype')->with('success', 'Cable Type has been added');
     }
 
     /**
@@ -53,19 +53,19 @@ class VoltMeterController extends Controller
      */
     public function show($id)
     {
-        $voltmeters = Voltmeter::all();
-        return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
+        $cabletypes = CableEntry::all();
+        return view('admin.cable-entry', ['cabletype' => $cabletypes]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     *   * @param  \App\Models\Voltmeter  $Voltmeters
+     *   * @param  \App\Models\CableEntry  $cabletype
      * @return \Illuminate\Http\Response
      */
-    public function edit(Voltmeter $voltmeter)
+    public function edit(Cableentry $cabletype)
     {
-        return view('admin.edit-voltmeter', compact('voltmeter'));
+        return view('admin.edit-cabletype', compact('cabletype'));
     }
 
     /**
@@ -79,33 +79,33 @@ class VoltMeterController extends Controller
     {
         $request->validate([
            
-            'voltmeters_name' => 'required',
+            'cabletypes_name' => 'required',
             'id' => 'id'
 
         ]);
 
 
-        $voltmeters = Voltmeter::find($id);
-        $voltmeters->voltmeters_name = $request->get('voltmeters_name');
+        $cabletypes = CableEntry::find($id);
+        $cabletypes->cabletypes_name = $request->get('cabletypes_name');
 
-        $voltmeters->update();
+        $cabletypes->update();
 
 
-        $voltmeters = Voltmeter::all();
+        $cabletypes = CableEntry::all();
       
 
-        return redirect('/voltmeter')->with('success', 'Voltmeter updated successfully');
+        return redirect('/cabletype')->with('success', 'Cable Type updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-    *   * @param  \App\Models\Voltmeter  $hps
+     *   * @param  \App\Models\CableEntry  $cabletype
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Voltmeter $voltmeter)
+    public function destroy(Cableentry $cabletype)
     {
-        $voltmeter->delete();
-        return redirect('/voltmeter')->with('success', 'Voltmeter deleted successfully');
+        $cabletype->delete();
+        return redirect('/cabletype')->with('success', 'Cable Type deleted successfully');
     }
 }

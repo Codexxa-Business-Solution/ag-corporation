@@ -108,6 +108,6 @@ class IndicationController extends Controller
     public function destroy(Indication $indication)
     {
         $indication->delete();
-        return redirect('/indication')->with('success', 'Indication deleted successfulyl');
+        return redirect('/indication')->with('success', 'Indication deleted successfully');
     }
 }

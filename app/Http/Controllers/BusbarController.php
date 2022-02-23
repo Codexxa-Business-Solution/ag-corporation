@@ -1,21 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Busbar;
 use Illuminate\Http\Request;
-use App\Models\Voltmeter;
-class VoltMeterController extends Controller
+
+class BusbarController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() 
+    public function index()
     {
-        $voltmeters = Voltmeter::all();
+        $busbars = Busbar::all();
       
-        return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
+        return view('admin.busbar', ['busbar' => $busbars]);
     }
 
     /**
@@ -25,7 +25,7 @@ class VoltMeterController extends Controller
      */
     public function create()
     {
-        return view('admin.add-volt-meter');
+        return view('admin.add-busbar');
     }
 
     /**
@@ -37,12 +37,12 @@ class VoltMeterController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'voltmeters_name' => 'required',
+            'busbars_type' => 'required',
             
         ]);
 
-        Voltmeter::create($request->all());
-        return redirect('voltmeter')->with('success', 'Voltmeter has been added');
+        Busbar::create($request->all());
+        return redirect('busbar')->with('success', 'Busbar Type has been added');
     }
 
     /**
@@ -53,21 +53,20 @@ class VoltMeterController extends Controller
      */
     public function show($id)
     {
-        $voltmeters = Voltmeter::all();
-        return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
+        $busbars = Busbar::all();
+        return view('admin.busbar', ['voltmeter' => $busbars]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     *   * @param  \App\Models\Voltmeter  $Voltmeters
+     *   * @param  \App\Models\Busbar  $busbars
      * @return \Illuminate\Http\Response
      */
-    public function edit(Voltmeter $voltmeter)
+    public function edit(Busbar $busbar)
     {
-        return view('admin.edit-voltmeter', compact('voltmeter'));
+        return view('admin.edit-busbars', compact('busbar'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -79,33 +78,33 @@ class VoltMeterController extends Controller
     {
         $request->validate([
            
-            'voltmeters_name' => 'required',
+            'busbars_type' => 'required',
             'id' => 'id'
 
         ]);
 
 
-        $voltmeters = Voltmeter::find($id);
-        $voltmeters->voltmeters_name = $request->get('voltmeters_name');
+        $busbars = Busbar::find($id);
+        $busbars->busbars_type = $request->get('busbars_type');
 
-        $voltmeters->update();
+        $busbars->update();
 
 
-        $voltmeters = Voltmeter::all();
+        $busbars = Busbar::all();
       
 
-        return redirect('/voltmeter')->with('success', 'Voltmeter updated successfully');
+        return redirect('/busbar')->with('success', 'Busbar Type updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-    *   * @param  \App\Models\Voltmeter  $hps
+     *   * @param  \App\Models\Busbar  $busbars
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Voltmeter $voltmeter)
+    public function destroy(Busbar $busbar)
     {
-        $voltmeter->delete();
-        return redirect('/voltmeter')->with('success', 'Voltmeter deleted successfully');
+        $busbar->delete();
+        return redirect('/busbar')->with('success', 'Busbar Type deleted successfully');
     }
 }

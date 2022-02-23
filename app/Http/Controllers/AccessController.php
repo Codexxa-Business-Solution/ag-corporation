@@ -1,21 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Access;
 use Illuminate\Http\Request;
-use App\Models\Voltmeter;
-class VoltMeterController extends Controller
+
+class AccessController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() 
+    public function index()
     {
-        $voltmeters = Voltmeter::all();
+        $access = Access::all();
       
-        return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
+        return view('admin.access', ['access' => $access]);
     }
 
     /**
@@ -23,9 +23,9 @@ class VoltMeterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create() 
     {
-        return view('admin.add-volt-meter');
+        return view('admin.add-access');
     }
 
     /**
@@ -37,12 +37,12 @@ class VoltMeterController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'voltmeters_name' => 'required',
+            'access_name' => 'required',
             
         ]);
 
-        Voltmeter::create($request->all());
-        return redirect('voltmeter')->with('success', 'Voltmeter has been added');
+        Access::create($request->all());
+        return redirect('access')->with('success', 'Access has been added');
     }
 
     /**
@@ -53,19 +53,19 @@ class VoltMeterController extends Controller
      */
     public function show($id)
     {
-        $voltmeters = Voltmeter::all();
-        return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
+        $access = Access::all();
+        return view('admin.access', ['access' => $access]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     *   * @param  \App\Models\Voltmeter  $Voltmeters
+     *   * @param  \App\Models\Access  $access
      * @return \Illuminate\Http\Response
      */
-    public function edit(Voltmeter $voltmeter)
+    public function edit(Access $access)
     {
-        return view('admin.edit-voltmeter', compact('voltmeter'));
+        return view('admin.edit-access', compact('access'));
     }
 
     /**
@@ -79,33 +79,33 @@ class VoltMeterController extends Controller
     {
         $request->validate([
            
-            'voltmeters_name' => 'required',
+            'access_name' => 'required',
             'id' => 'id'
 
         ]);
 
 
-        $voltmeters = Voltmeter::find($id);
-        $voltmeters->voltmeters_name = $request->get('voltmeters_name');
+        $access = Access::find($id);
+        $access->access_name = $request->get('access_name');
 
-        $voltmeters->update();
+        $access->update();
 
 
-        $voltmeters = Voltmeter::all();
+        $access = Access::all();
       
 
-        return redirect('/voltmeter')->with('success', 'Voltmeter updated successfully');
+        return redirect('/access')->with('success', 'Access updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-    *   * @param  \App\Models\Voltmeter  $hps
+     *   * @param  \App\Models\Access  $access
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Voltmeter $voltmeter)
+    public function destroy(Access $access)
     {
-        $voltmeter->delete();
-        return redirect('/voltmeter')->with('success', 'Voltmeter deleted successfully');
+        $access->delete();
+        return redirect('/access')->with('success', 'Access deleted successfully');
     }
 }

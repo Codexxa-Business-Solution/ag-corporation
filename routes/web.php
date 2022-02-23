@@ -11,6 +11,14 @@ use App\Http\Controllers\IndicationController;
 use App\Http\Controllers\VoltmeterController;
 use App\Http\Controllers\AmmeterController;
 use App\Http\Controllers\SwitchMakeController;
+use App\Http\Controllers\PanelLocationController;
+use App\Http\Controllers\PanelColourController;
+use App\Http\Controllers\BusbarController;
+use App\Http\Controllers\CableEntryController;
+use App\Http\Controllers\CableMakeTypeController;
+use App\Http\Controllers\AccessController;
+use App\Http\Controllers\MountingController;
+use App\Http\Controllers\PanelTypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +36,15 @@ Route::resource('indication', IndicationController::class);
 Route::resource('voltmeter', VoltmeterController::class);
 Route::resource('ammeter', AmmeterController::class);
 Route::resource('switchmake', SwitchMakeController::class);
+Route::resource('panellocation', PanelLocationController::class);
+Route::resource('panelcolour', PanelColourController::class);
+Route::resource('busbar', BusbarController::class);
+Route::resource('cabletype', CableEntryController::class);
+Route::resource('cablemaketype', CableMakeTypeController::class);
+Route::resource('access', AccessController::class);
+Route::resource('mounting', MountingController::class);
+Route::resource('paneltype', PanelTypeController::class);
+
 
 
 Route::resource('category', CategoryController::class);

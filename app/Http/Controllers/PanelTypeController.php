@@ -3,19 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Voltmeter;
-class VoltMeterController extends Controller
+use App\Models\PanelType;
+
+class PanelTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() 
+    public function index()
     {
-        $voltmeters = Voltmeter::all();
+        $paneltypes = PanelType::all();
       
-        return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
+        return view('admin.panel-type', ['paneltype' => $paneltypes]);
     }
 
     /**
@@ -25,7 +26,7 @@ class VoltMeterController extends Controller
      */
     public function create()
     {
-        return view('admin.add-volt-meter');
+        return view('admin.add-panel-type');
     }
 
     /**
@@ -37,12 +38,12 @@ class VoltMeterController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'voltmeters_name' => 'required',
+            'paneltype_name' => 'required',
             
         ]);
 
-        Voltmeter::create($request->all());
-        return redirect('voltmeter')->with('success', 'Voltmeter has been added');
+        PanelType::create($request->all());
+        return redirect('paneltype')->with('success', 'PanelType has been added');
     }
 
     /**
@@ -53,19 +54,19 @@ class VoltMeterController extends Controller
      */
     public function show($id)
     {
-        $voltmeters = Voltmeter::all();
-        return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
+        $paneltypes = PanelType::all();
+        return view('admin.panel-type', ['paneltype' => $paneltypes]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     *   * @param  \App\Models\Voltmeter  $Voltmeters
+     *   * @param  \App\Models\PanelType  $paneltype
      * @return \Illuminate\Http\Response
      */
-    public function edit(Voltmeter $voltmeter)
+    public function edit(PanelType $paneltype)
     {
-        return view('admin.edit-voltmeter', compact('voltmeter'));
+        return view('admin.edit-paneltype', compact('paneltype'));
     }
 
     /**
@@ -79,33 +80,33 @@ class VoltMeterController extends Controller
     {
         $request->validate([
            
-            'voltmeters_name' => 'required',
+            'paneltype_name' => 'required',
             'id' => 'id'
 
         ]);
 
 
-        $voltmeters = Voltmeter::find($id);
-        $voltmeters->voltmeters_name = $request->get('voltmeters_name');
+        $paneltypes = PanelType::find($id);
+        $paneltypes->paneltype_name = $request->get('paneltype_name');
 
-        $voltmeters->update();
+        $paneltypes->update();
 
 
-        $voltmeters = Voltmeter::all();
+        $paneltypes = PanelType::all();
       
 
-        return redirect('/voltmeter')->with('success', 'Voltmeter updated successfully');
+        return redirect('/paneltype')->with('success', 'Panel Type updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-    *   * @param  \App\Models\Voltmeter  $hps
+   *   * @param  \App\Models\PanelType  $paneltype
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Voltmeter $voltmeter)
+    public function destroy(PanelType $paneltype)
     {
-        $voltmeter->delete();
-        return redirect('/voltmeter')->with('success', 'Voltmeter deleted successfully');
+        $paneltype->delete();
+        return redirect('/paneltype')->with('success', 'Panel Type deleted successfully');
     }
 }

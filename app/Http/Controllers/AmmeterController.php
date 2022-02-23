@@ -60,7 +60,7 @@ class AmmeterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     *   * @param  \App\Models\Voltmeter  $Voltmeters
+     *   * @param  \App\Models\Ammeter  $ammeter
      * @return \Illuminate\Http\Response
      */
     public function edit(Ammeter $ammeter)
@@ -106,6 +106,6 @@ class AmmeterController extends Controller
     public function destroy(Ammeter $ammeter)
     {
         $ammeter->delete();
-        return redirect('/ammeter')->with('success', 'Ammeter deleted successfulyl');
+        return redirect('/ammeter')->with('success', 'Ammeter deleted successfully');
     }
 }
