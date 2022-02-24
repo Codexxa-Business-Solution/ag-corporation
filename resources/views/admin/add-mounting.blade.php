@@ -19,25 +19,28 @@
         @slot('title') Mounting Details @endslot
     @endcomponent
 
-    <div class="row">
+    <div class="row"> 
         <div class="col-lg-6">
             <div class="card">
-               
+                @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                    @php
+                        Session::forget('success');
+                    @endphp
+                </div>
+                @endif
                 <div class="card-body">
-                    <form>
+                    <form action="{{ route('mounting.store') }}" method="POST">
+                    @csrf
                         <div class="mb-4">
                             <label class="form-label" for="default-input">Mounting </label>
-                            <input class="form-control" type="text" id="default-input" 
-                            placeholder="Enter Mounting">
+                            <input class="form-control" type="text" name="mounting_name" id="default-input" 
+                            placeholder="Enter Mounting" required>
                         </div>
                       
-                        <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
-                            <a class=" dropdown-toggle arrow-none" href="" 
-                            id="topnav-dashboard" role="button" style="color:white;">
-                            <!-- <i data-feather="home"></i> -->
-                            Add Mounting
-                            </a>
-                        </button>
+                        <button type="submit"  class="btn btn-primary"> Add Mounting</button>
+
                     </form>
                 </div>
             </div>

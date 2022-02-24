@@ -30,7 +30,7 @@
                     @endphp
                 </div>
                 @endif
-
+ 
                 <div class="card-body">
                     <form action="{{ route('hp.store') }}" method="POST">
                     @csrf
@@ -47,7 +47,7 @@
                             Add HP
                             </a>
                         </button> -->
-                        <button type="submit"  class="btn btn-default"> Add HP</button>
+                        <button type="submit"  class="btn btn-primary"> Add HP</button>
                     </form>
                 </div>
             </div>

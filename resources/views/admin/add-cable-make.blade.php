@@ -22,22 +22,25 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
-               
+                @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                    @php
+                        Session::forget('success');
+                    @endphp
+                </div>
+                @endif
                 <div class="card-body">
-                    <form>
+                    <form action="{{ route('cablemaketype.store') }}" method="POST">
+                    @csrf
                         <div class="mb-4">
                             <label class="form-label" for="default-input">Cable Make </label>
-                            <input class="form-control" type="text" id="default-input" 
-                            placeholder="Enter Cable Make">
+                            <input class="form-control" type="text" name="cablemake_name" id="default-input" 
+                            placeholder="Enter Cable Make" required>
                         </div>
                       
-                        <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
-                            <a class=" dropdown-toggle arrow-none" href="" 
-                            id="topnav-dashboard" role="button" style="color:white;">
-                            <!-- <i data-feather="home"></i> -->
-                            Add Cable Make
-                            </a>
-                        </button>
+                        <button type="submit"  class="btn btn-primary">Add Cable Make Type </button>
+
                     </form>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title') @lang('translation.hp_products') @endsection
+@section('title') @lang(' Panel Type') @endsection
 
 @section('css')
 
@@ -22,22 +22,25 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
-               
+                @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                    @php
+                        Session::forget('success');
+                    @endphp
+                </div>
+                @endif
                 <div class="card-body">
-                    <form>
+                    <form action="{{ route('paneltype.store') }}" method="POST">
+                    @csrf
                         <div class="mb-4">
                             <label class="form-label" for="default-input">Panel Type </label>
-                            <input class="form-control" type="text" id="default-input" 
-                            placeholder="Enter Panel Type">
+                            <input class="form-control" type="text" name="paneltype_name" id="default-input" 
+                            placeholder="Enter Panel Type" required>
                         </div>
-                      
-                        <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
-                            <a class=" dropdown-toggle arrow-none" href="" 
-                            id="topnav-dashboard" role="button" style="color:white;">
-                            <!-- <i data-feather="home"></i> -->
-                            Add Panel Type
-                            </a>
-                        </button>
+
+                        <button type="submit"  class="btn btn-primary"> Add Panel Type</button>
+
                     </form>
                 </div>
             </div>

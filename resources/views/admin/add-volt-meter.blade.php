@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title') @lang('translation.hp_products') @endsection
+@section('title') @lang(' Volt Meter') @endsection
 
 @section('css')
 
@@ -22,24 +22,32 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
-               
+                @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                    @php
+                        Session::forget('success');
+                    @endphp
+                </div>
+                @endif 
                 <div class="card-body">
-                    <form>
+                    <form action="{{ route('voltmeter.store') }}" method="POST">
+                    @csrf
                         <div class="mb-4">
                             <label class="form-label" for="default-input">Volt Meter </label>
-                            <input class="form-control" type="text" id="default-input" 
+                            <input class="form-control" type="text" name="voltmeters_name" id="default-input" 
                             placeholder="Enter Volt Meter">
                         </div>
                       
-                        <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
+                        <!-- <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
                             <a class=" dropdown-toggle arrow-none" href="" 
                             id="topnav-dashboard" role="button" style="color:white;">
-                            <!-- <i data-feather="home"></i> -->
                             Add Volt Meter
                             </a>
-                        </button>
+                        </button> -->
+                        <button type="submit"  class="btn btn-primary"> Add HP</button>
                     </form>
-                </div>
+                </div> 
             </div>
         </div>
     </div>

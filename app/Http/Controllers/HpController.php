@@ -112,6 +112,6 @@ class HpController extends Controller
     {
         //
         $hp->delete();
-        return redirect('/hp')->with('success', 'HP deleted successfulyl');
+        return redirect('/hp')->with('success', 'HP deleted successfully');
     }
 }

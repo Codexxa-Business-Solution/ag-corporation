@@ -23,6 +23,14 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
+            @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                    @php
+                        Session::forget('success');
+                    @endphp
+                </div>
+                @endif
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm">
@@ -35,7 +43,7 @@
                             <div class="d-flex align-items-center gap-1 mb-4">
                             <div class="mb-4">
                                 <button type="button" class="btn btn-light waves-effect waves-light">
-                                    <a href="admin.add-panel-colour" data-key="t-invoice-list">
+                                    <a href="{{ route('panelcolour.create') }}" data-key="t-invoice-list">
                                     <i class="bx bx-plus me-1"></i> Add Panel Colour</a>
                                 </button>
                             </div>
@@ -61,38 +69,55 @@
                                     <th style="width: 90px;">Action</th>
                                 </tr>
                             </thead>
+                            @foreach($panelcolour as $panelcolours) 
                             <tbody>
-                            
-                                <tr>
-                                    <td>
-                                        <div class="form-check font-size-16">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-label"></label>
-                                        </div>
-                                    </td>
 
-                                    <td><a href="javascript: void(0);" class="text-dark fw-medium">#MN0215</a> </td>
-                                    <td>
-                                    FIRE RED
-                                    </td>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check font-size-16">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label"></label>
+                                            </div>
+                                        </td>
+
+                                        <!-- <td><a href="javascript: void(0);" class="text-dark fw-medium"></a> </td> -->
+                                    
+                                        <td>{{$loop->iteration}}</td>
 
                                     <td>
-                                        <div class="dropdown">
-                                            <button
-                                                class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
-                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
+                                    {{ $panelcolours->panelcolours_name }}
+
                                     </td>
-                                </tr>
-                                
-                                
+                                    
+                                    <td>
+                                            <div class="dropdown">
+                                                <!-- <button
+                                                    class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
+                                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bx bx-dots-horizontal-rounded"></i>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end"> -->
+                                                    
+                                            <form action="{{ route('panelcolour.destroy',$panelcolours->id) }}" method="POST">
+
+                                                <a class="btn btn-primary" href="{{ route('panelcolour.edit',$panelcolours->id) }}">Edit</a>
+
+
+                                                @csrf
+                                                @method('DELETE')
+
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+
+                                            </form>
+                                                <!-- </ul> -->
+                                            </div>
+                                    </td>
+                                    
+                                    </tr>
+                                    
+                                    
                             </tbody>
+                            @endforeach
                         </table>
                     </div>
                     <!-- end table responsive -->

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title') @lang('translation.hp_products') @endsection
+@section('title') @lang('Incomer Selection') @endsection
 
 @section('css')
 
@@ -22,22 +22,30 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
-               
+                @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                    @php
+                        Session::forget('success');
+                    @endphp
+                </div>
+                @endif
                 <div class="card-body">
-                    <form>
+                    <form action="{{ route('indication.store') }}" method="POST">
+                    @csrf
                         <div class="mb-4">
                             <label class="form-label" for="default-input">Indication </label>
-                            <input class="form-control" type="text" id="default-input" 
+                            <input class="form-control" type="text" name="indication_name" id="default-input" 
                             placeholder="Enter Indication">
                         </div>
                       
-                        <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
+                        <!-- <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
                             <a class=" dropdown-toggle arrow-none" href="" 
                             id="topnav-dashboard" role="button" style="color:white;">
-                            <!-- <i data-feather="home"></i> -->
                             Add Indication
                             </a>
-                        </button>
+                        </button> -->
+                        <button type="submit"  class="btn btn-primary"> Add Indication</button>
                     </form>
                 </div>
             </div>

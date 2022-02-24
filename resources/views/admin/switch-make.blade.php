@@ -35,7 +35,7 @@
                             <div class="d-flex align-items-center gap-1 mb-4">
                             <div class="mb-4">
                                 <button type="button" class="btn btn-light waves-effect waves-light">
-                                    <a href="admin.add-switch-make" data-key="t-invoice-list">
+                                    <a href="{{ route('switchmake.create') }}" data-key="t-invoice-list">
                                     <i class="bx bx-plus me-1"></i> Add Switch Make</a>
                                 </button>
                             </div>
@@ -61,65 +61,49 @@
                                     <th style="width: 90px;">Action</th>
                                 </tr>
                             </thead>
+                            @foreach($switchmake as $switchmakes) 
                             <tbody>
-                            
-                                <tr>
-                                    <td>
-                                        <div class="form-check font-size-16">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-label"></label>
-                                        </div>
-                                    </td>
 
-                                    <td><a href="javascript: void(0);" class="text-dark fw-medium">#MN0215</a> </td>
-                                    <td>
-                                    L&T
-                                    </td>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check font-size-16">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label"></label>
+                                            </div>
+                                        </td>
 
-                                    <td>
-                                        <div class="dropdown">
-                                            <button
-                                                class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
-                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-check font-size-16">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-label"></label>
-                                        </div>
-                                    </td>
-
-                                    <td><a href="javascript: void(0);" class="text-dark fw-medium">#MN0215</a> </td>
-                                    <td>
-                                    L&T
-                                    </td>
+                                        <!-- <td><a href="javascript: void(0);" class="text-dark fw-medium"></a> </td> -->
+                                    
+                                        <td>{{$loop->iteration}}</td>
 
                                     <td>
-                                        <div class="dropdown">
-                                            <button
-                                                class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
-                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
+                                    {{ $switchmakes->switchmakes_name }}
+
                                     </td>
-                                </tr>
-                                
-                                
+                                    
+                                    <td>
+                                            <div class="dropdown">
+                                                      
+                                            <form action="{{ route('switchmake.destroy',$switchmakes->id) }}" method="POST">
+
+                                                <a class="btn btn-primary" href="{{ route('switchmake.edit',$switchmakes->id) }}">Edit</a>
+
+
+                                                @csrf
+                                                @method('DELETE')
+
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+
+                                            </form>
+                                           
+                                            </div>
+                                    </td>
+                                    
+                                    </tr>
+                                    
+                                    
                             </tbody>
+                            @endforeach
                         </table>
                     </div>
                     <!-- end table responsive -->
