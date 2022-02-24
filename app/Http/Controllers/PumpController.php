@@ -18,8 +18,8 @@ class PumpController extends Controller
 
         $pumps = Pump::all();
       
-        return view('admin.manage-units', ['unit' => $units]);
-
+        return view('admin.manage_products', ['pump' => $pumps]);
+        
     }
 
     /**
