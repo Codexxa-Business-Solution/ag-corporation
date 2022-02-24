@@ -14,4 +14,8 @@ class VoltMeter extends Model
         'voltmeters_name',
         
     ];
+
+
+
+
 }
