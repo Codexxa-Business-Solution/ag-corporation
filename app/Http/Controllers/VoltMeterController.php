@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Voltmeter;
+use App\Models\VoltMeter;
 class VoltMeterController extends Controller
 {
     /**
@@ -13,7 +13,7 @@ class VoltMeterController extends Controller
      */
     public function index() 
     {
-        $voltmeters = Voltmeter::all();
+        $voltmeters = VoltMeter::all();
       
         return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
     }
@@ -41,7 +41,7 @@ class VoltMeterController extends Controller
             
         ]);
 
-        Voltmeter::create($request->all());
+        VoltMeter::create($request->all());
         return redirect('voltmeter')->with('success', 'Voltmeter has been added');
     }
 
@@ -53,7 +53,7 @@ class VoltMeterController extends Controller
      */
     public function show($id)
     {
-        $voltmeters = Voltmeter::all();
+        $voltmeters = VoltMeter::all();
         return view('admin.volt-meter', ['voltmeter' => $voltmeters]);
     }
 
@@ -85,13 +85,13 @@ class VoltMeterController extends Controller
         ]);
 
 
-        $voltmeters = Voltmeter::find($id);
+        $voltmeters = VoltMeter::find($id);
         $voltmeters->voltmeters_name = $request->get('voltmeters_name');
 
         $voltmeters->update();
 
 
-        $voltmeters = Voltmeter::all();
+        $voltmeters = VoltMeter::all();
       
 
         return redirect('/voltmeter')->with('success', 'Voltmeter updated successfully');
