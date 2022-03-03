@@ -148,7 +148,7 @@
                             Add Product
                             </a>
                         </button> -->
-                        <button type="submit" class="btn btn-default">  Add Product</button>
+                        <button type="submit" class="btn btn-info">  Add Product</button>
 
                     </form>
                 </div>
