@@ -32,14 +32,15 @@
                             <input class="form-control" type="text" name="category_name" value="{{ $category->category_name }}"  id="default-input" 
                             placeholder="Enter Category Name" Required>
                         </div>
-                      
+<!--                       
                         <button type="submit" class="btn btn-info btn-rounded waves-effect waves-light"> 
                             <a class=" dropdown-toggle arrow-none" href="" 
                             id="topnav-dashboard" role="button" style="color:white;">
-                            <!-- <i data-feather="home"></i> -->
                             Add Category
                             </a>
-                        </button>
+                        </button> -->
+                        <button type="submit" class="btn btn-info">  Add Category</button>
+
                     </form>
                     
                 </div>

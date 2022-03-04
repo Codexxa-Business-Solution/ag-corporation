@@ -22,22 +22,31 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
-               
+            @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                    @php
+                        Session::forget('success');
+                    @endphp
+                </div>
+                @endif
                 <div class="card-body">
-                    <form>
+                    <!-- <form> -->
+                    <form action="{{ route('subcategory.store') }}" method="POST">
+                    @csrf
                         <div class="mb-4">
                             <label class="form-label" for="default-input">SubCategory Name </label>
-                            <input class="form-control" type="text" id="default-input" 
+                            <input class="form-control" name ="subcategory_name" type="text" id="default-input" 
                             placeholder="Enter SubCategory Name">
                         </div>
                       
-                        <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
+                        <!-- <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
                             <a class=" dropdown-toggle arrow-none" href="" 
                             id="topnav-dashboard" role="button" style="color:white;">
-                            <!-- <i data-feather="home"></i> -->
-                            Add SubCategory
+                             Add SubCategory
                             </a>
-                        </button>
+                        </button> -->
+                        <button type="submit" class="btn btn-info"> Add SubCategory</button>
                     </form>
                 </div>
             </div>
@@ -63,6 +72,8 @@
                                     <th style="width: 90px;">Action</th>
                                 </tr>
                             </thead>
+                            @foreach($subcategory as $sub_categories) 
+
                             <tbody>
                             
                                 <tr>
@@ -73,22 +84,36 @@
                                         </div>
                                     </td>
 
-                                    <td><a href="javascript: void(0);" class="text-dark fw-medium">#15</a> </td>
-                                   
+                                    <!-- <td><a href="javascript: void(0);" class="text-dark fw-medium">#15</a> </td> -->
+                                    <td>{{$loop->iteration}}</td>
+
                                    <td>
-                                      Ammeter
+                                      {{ $sub_categories->subcategory_name }}
+
                                     </td>
                                  
                                     <td>
                                         <div class="dropdown">
-                                            <button
+                                           
+
+                                <button
                                                 class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
                                                 type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="bx bx-dots-horizontal-rounded"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                
+                                                <form action="{{ route('subcategory.destroy',$sub_categories->id) }}" method="POST">
+
+                        <a class="btn btn-primary" href="{{ route('subcategory.edit',$sub_categories->id) }}">Edit</a>
+
+
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                        
+                             </form>
                                             </ul>
                                         </div>
                                     </td>
@@ -96,6 +121,8 @@
                                 
                                 
                             </tbody>
+                            @endforeach
+
                         </table>
                     </div>
                     <!-- end table responsive -->
