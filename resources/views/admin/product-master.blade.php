@@ -106,10 +106,10 @@
                                    {{ $products->category_name}}
                                     </td>
                                    <td>
-                                   {{ $products->subcategory}}
+                                   {{ $products->subcategory_name}}
                                     </td>
                                    <td>
-                                   {{ $products->manf_name}}
+                                   {{ $products->manufacturing}}
                                     </td>
                                    <td>
                                    {{ $products->purchase_rate}}

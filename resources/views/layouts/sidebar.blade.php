@@ -57,7 +57,7 @@
                                         data-key="t-invoice-list">@lang('translation.Product_Master_list')</a></li>
                                 <li><a href="{{ route('category.index') }}"
                                         data-key="t-invoice-list">@lang('translation.add_category')</a></li>
-                                <li><a href="admin.manage-product-subCategory"
+                                <li><a href="{{ route('subcategory.index') }}"
                                         data-key="t-invoice-list">@lang('translation.add_sub_category')</a></li>
                                 <li><a href="{{ route('manufacture.index') }}"
                                         data-key="t-invoice-detail">@lang('translation.add_manufacturing_name')</a></li>

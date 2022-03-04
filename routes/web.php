@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\ManufactureController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HpController;
 use App\Http\Controllers\IndicationController;
@@ -19,6 +20,7 @@ use App\Http\Controllers\CableMakeTypeController;
 use App\Http\Controllers\AccessController;
 use App\Http\Controllers\MountingController;
 use App\Http\Controllers\PanelTypeController;
+use App\Http\Controllers\QouteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,8 @@ use App\Http\Controllers\PanelTypeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('qoute', QouteController::class);
+
 Route::resource('unit', UnitController::class);
 Route::resource('hp', HpController::class);
 Route::resource('indication', IndicationController::class);
@@ -48,6 +52,8 @@ Route::resource('paneltype', PanelTypeController::class);
 
 
 Route::resource('category', CategoryController::class);
+Route::resource('subcategory', SubCategoryController::class);
+
 Route::resource('product', ProductController::class);
 
 Route::resource('manufacture', ManufactureController::class);

@@ -125,7 +125,7 @@
                         <li class="nav-item dropdown">
                             <button type="button" class="btn btn-info btn-rounded waves-effect 
                                 waves-light" style="background: #0069a5;"> 
-                                <a class=" dropdown-toggle arrow-none" href="user.get-a-quote" 
+                                <a class=" dropdown-toggle arrow-none" href="{{ route('qoute.index') }}" 
                             id="topnav-dashboard" role="button" style="color:white;">
                                 <!-- <i data-feather="home"></i> -->
                                 <span data-key="t-dashboards">@lang('translation.Get_A_Quote')</span>

@@ -646,7 +646,9 @@ button:hover {
     </div> -->
 
 
-    <form id="regForm" action="">
+    <!-- <form id="regForm" action=""> -->
+    <form id="regForm" action="{{ route('qoute.store') }}" method="POST">
+
   <!-- <h1>Register:</h1> -->
   <!-- One "tab" for each step in the form: -->
   <div class="tab">
