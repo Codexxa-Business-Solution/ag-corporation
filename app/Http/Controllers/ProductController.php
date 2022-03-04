@@ -6,6 +6,8 @@ use App\Models\Product;
 use App\Models\Manufacture;
 use App\Models\Unit;
 use App\Models\Category;
+use App\Models\SubCategory;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -22,8 +24,9 @@ class ProductController extends Controller
         $products = Product::join('units', 'units.id', '=', 'products.units')
         ->join('manufactures', 'manufactures.id', '=', 'products.manf_name')
         ->join('categories', 'categories.id', '=', 'products.category')
+        ->join('sub_categories', 'sub_categories.id', '=', 'products.subcategory')
 
-        ->get(['products.id','products.item_name','products.category','products.subcategory', 'products.manf_name','products.units','products.purchase_rate','products.purchase_discount','products.actual_rate', 'units.units', 'manufactures.manufacturing','categories.category_name']);
+        ->get(['products.id','products.item_name','products.category','products.subcategory','sub_categories.subcategory_name', 'products.manf_name','products.units','products.purchase_rate','products.purchase_discount','products.actual_rate', 'units.units', 'manufactures.manufacturing','categories.category_name']);
 
 
             // // ->get(['units.*','manufactures.*',"product.item_name"]);
@@ -44,8 +47,9 @@ class ProductController extends Controller
         $unit = Unit::all();
         $category = Category::all();
         $manufacture = Manufacture::all();
+        $subcategory = SubCategory::all();
 
-        return view('admin.add-product-master', compact('unit','category','manufacture'));
+        return view('admin.add-product-master', compact('unit','category','manufacture','subcategory'));
 
     }
 
@@ -101,8 +105,9 @@ class ProductController extends Controller
         $unit = Unit::all();
         $category = Category::all();
         $manufacture = Manufacture::all();
+        $subcategory = SubCategory::all();
 
-        return view('admin.edit-product-master', compact('unit','category','manufacture','product'));
+        return view('admin.edit-product-master', compact('unit','category','manufacture','product','subcategory'));
 
     }
 
@@ -120,7 +125,7 @@ class ProductController extends Controller
         $request->validate([
             'units' => 'required',
             'category' => 'required',
-            // 'subcategory' => 'required',
+             'subcategory' => 'required',
             'manf_name' => 'required',
             'purchase_rate' => 'required',
             'purchase_discount' => 'required',

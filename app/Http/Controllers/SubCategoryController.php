@@ -18,7 +18,7 @@ class SubCategoryController extends Controller
 
         $subcategorys = SubCategory::all();
       
-        return view('admin.manage-product-subCategory', ['subcategories' => $subcategorys]);
+        return view('admin.manage-product-subCategory', ['subcategory' => $subcategorys]);
 
     }
     /**
@@ -31,7 +31,7 @@ class SubCategoryController extends Controller
     public function create()
     {
 
-        return view('admin.manage-product-category');
+        return view('admin.manage-product-subCategory');
 
     }
 
@@ -43,14 +43,13 @@ class SubCategoryController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate([
-            'category_name' => 'required',
+            'subcategory_name' => 'required',
             
         ]);
 
         SubCategory::create($request->all());
-         return redirect('category')->with('success', 'Category has been added');
+         return redirect('subcategory')->with('success', ' Sub Category has been added');
 
     }
 
@@ -60,7 +59,7 @@ class SubCategoryController extends Controller
      * @param  \App\Models\Unit  $unit
      * @return \Illuminate\Http\Response
      */
-    public function show(SubCategory $SubCategory)
+    public function show(SubCategory $subcategory)
     {
         //
     }
@@ -71,10 +70,10 @@ class SubCategoryController extends Controller
      * @param  \App\Models\Unit  $unit
      * @return \Illuminate\Http\Response
      */
-    public function edit(SubCategory $SubCategory)
+    public function edit(SubCategory $subcategory)
     {
        
-      return view('admin.edit-product-category', compact('category'));
+      return view('admin.edit_subcategory', compact('subcategory'));
 
     }
 
@@ -91,21 +90,21 @@ class SubCategoryController extends Controller
        
          $request->validate([
            
-            'category_name' => 'required',
+            'subcategory_name' => 'required',
             'id' => 'id'
 
         ]);
 
-        $category = SubCategory::find($id);
-        $category->category_name = $request->get('category_name');
+        $subcategory = SubCategory::find($id);
+        $subcategory->subcategory_name = $request->get('subcategory_name');
 
-        $category->update();
+        $subcategory->update();
 
 
-        $categorys = SubCategory::all();
+        $subcategorys = SubCategory::all();
       
 
-        return redirect('/category')->with('success', 'category updated successfully');
+        return redirect('/subcategory')->with('success', 'category updated successfully');
 
 
     }
@@ -116,10 +115,9 @@ class SubCategoryController extends Controller
      * @param  \App\Models\Unit  $unit
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SubCategory $SubCategory)
+    public function destroy(SubCategory $subcategory)
     {
-
-           $Category->delete();
-           return redirect('/category')->with('success', 'category name deleted successfully');
+           $subcategory->delete();
+           return redirect('/subcategory')->with('success', 'sub category name deleted successfully');
     }
 }

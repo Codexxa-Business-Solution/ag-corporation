@@ -84,18 +84,38 @@
                                   
                                      
                                    <select name="category" class="form-control form-select" style="width:250px">
-                    <option value="">Select Category</option>
-                    @foreach ($category as $key => $value)
-                    <option value="{{ $value->id }}">{{ $value->category_name }}</option>
-                    @endforeach
-                </select>
+                                    <option value="">Select Category</option>
+                                    @foreach ($category as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->category_name }}</option>
+                                    @endforeach
+                                      </select>
                                    <div class="invalid-feedback">
                                      Please provide a Category.
                                    </div>
                                  </div>
                              </div>
+                        
                         </div>
                         <div class="col-lg-6">
+                            <div class="mb-2">
+                               <div class="mb-3">
+                                  <label class="form-label" for="validationCustom05"> Sub Category</label>
+                                  
+                                     
+                                   <select name="subcategory" class="form-control form-select" style="width:250px">
+                                    <option value="">Select Category</option>
+                                    @foreach ($subcategory as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->subcategory_name }}</option>
+                                    @endforeach
+                                      </select>
+                                   <div class="invalid-feedback">
+                                     Please provide a subcategory.
+                                   </div>
+                                 </div>
+                             </div>
+                        
+                        </div>
+                        <!-- <div class="col-lg-6">
                            <div class="mb-2">
                                <div class="mb-3">
                                   <label class="form-label" name="subcategory" for="validationCustom05">Sub Category</label>
@@ -110,7 +130,9 @@
                                    </div>
                                  </div>
                              </div>
-                        </div>
+                        </div> -->
+
+                        
                         <div class="col-lg-6">
                           <div class="mb-4">
                                 <label class="form-label" for="default-input">Purchase Rate </label>
@@ -148,7 +170,7 @@
                             Add Product
                             </a>
                         </button> -->
-                        <button type="submit" class="btn btn-default">  Add Product</button>
+                        <button type="submit" class="btn btn-info">  Add Product</button>
 
                     </form>
                 </div>
