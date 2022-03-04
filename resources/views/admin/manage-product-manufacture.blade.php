@@ -39,7 +39,7 @@
                             Add Manufacture
                             </a>
                         </button> -->
-                        <button type="submit" class="btn btn-default"> Add Manufacture</button>
+                        <button type="submit" class="btn btn-info"> Add Manufacture</button>
 
                     </form>
                 </div>

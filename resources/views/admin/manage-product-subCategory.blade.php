@@ -31,13 +31,14 @@
                             placeholder="Enter SubCategory Name">
                         </div>
                       
-                        <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
+                        <!-- <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
                             <a class=" dropdown-toggle arrow-none" href="" 
                             id="topnav-dashboard" role="button" style="color:white;">
-                            <!-- <i data-feather="home"></i> -->
-                            Add SubCategory
+                             Add SubCategory
                             </a>
-                        </button>
+                        </button> -->
+                        <button type="submit" class="btn btn-info"> Add Manufacture</button>
+
                     </form>
                 </div>
             </div>

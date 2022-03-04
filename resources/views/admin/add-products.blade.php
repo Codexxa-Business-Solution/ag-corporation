@@ -71,13 +71,14 @@
                             <input class="form-control" type="text" id="default-input" 
                             placeholder="Enter No Of Pump">
                         </div> -->
-                        <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
+                        <!-- <button type="button" class="btn btn-info btn-rounded waves-effect waves-light"> 
                             <a class=" dropdown-toggle arrow-none" href="" 
                             id="topnav-dashboard" role="button" style="color:white;">
-                            <!-- <i data-feather="home"></i> -->
-                            Add Pump
+                           Add Pump
                             </a>
-                        </button>
+                        </button> -->
+                        <button type="submit" class="btn btn-info"> Add Pump</button>
+
                     </form>
                 </div>
             </div>
