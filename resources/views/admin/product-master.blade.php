@@ -141,13 +141,13 @@
 
                                             <form action="{{ route('product.destroy',$products->id) }}" method="POST">
 
-<a class="btn btn-primary" href="{{ route('product.edit',$products->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('product.edit',$products->id) }}">Edit</a>
 
 
-@csrf
-@method('DELETE')
+                        @csrf
+                        @method('DELETE')
 
-<button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
                                         </div>
                                     </td>
                                 </tr>

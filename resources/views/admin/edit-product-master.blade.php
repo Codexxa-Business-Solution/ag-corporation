@@ -147,21 +147,21 @@
                         <div class="col-lg-6">
                           <div class="mb-4">
                                 <label class="form-label" for="default-input">Purchase Rate </label>
-                                <input class="form-control" name="purchase_rate"  value="{{ $product->purchase_rate }}" type="number" id="default-input" 
+                                <input class="form-control" name="purchase_rate"  value="{{ $product->purchase_rate }}"  id="default-input" 
                                 placeholder="Enter Rate">
                            </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="mb-4">
                                 <label class="form-label" for="default-input">Purchase Discount </label>
-                                <input class="form-control"  name="purchase_discount" value="{{ $product->purchase_discount }}" type="number" id="default-input" 
+                                <input class="form-control"  name="purchase_discount" value="{{ $product->purchase_discount }}"  id="default-input" 
                                 placeholder="Enter Discount in %">
                            </div>
                         </div>
                         <div class="col-lg-12">
                            <div class="mb-4">
                                 <label class="form-label" for="default-input">Actual Rate </label>
-                                <input class="form-control"  name="actual_rate"  value="{{ $product->actual_rate }}" type="number" id="default-input" value=""
+                                <input class="form-control"  name="actual_rate"  value="{{ $product->actual_rate }}"  id="default-input" value=""
                                 placeholder=" Actual Rate " >
 
                            </div>

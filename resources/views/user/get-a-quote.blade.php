@@ -12,7 +12,7 @@
         
         <style>
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;   
 }
 
 body {
@@ -101,7 +101,14 @@ button:hover {
     @endcomponent
 
 
- 
+    @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                    @php
+                        Session::forget('success');
+                    @endphp
+                </div>
+                @endif
 
     <!-- tab section -->
     <!-- <div class="row">
@@ -648,6 +655,7 @@ button:hover {
 
     <!-- <form id="regForm" action=""> -->
     <form id="regForm" action="{{ route('qoute.store') }}" method="POST">
+    @csrf
 
   <!-- <h1>Register:</h1> -->
   <!-- One "tab" for each step in the form: -->
@@ -706,12 +714,12 @@ button:hover {
                                                 <div class="row">
                                                     <div class="mb-3">
                                                         <label for="example-search-input" class="form-label">Project Name</label>
-                                                        <input class="form-control" type="text" placeholder="Project Name"
+                                                        <input class="form-control" type="text" name ="project_name" placeholder="Project Name"
                                                             id="example-search-input">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="example-datetime-local-input" class="form-label">Date</label>
-                                                        <input class="form-control" type="datetime-local" value="2019-08-19T13:45:00"
+                                                        <input class="form-control" name ="date" type="datetime-local" value=""
                                                             id="example-datetime-local-input">
                                                     </div>
                                                     <!-- <div class="mb-3">
@@ -719,13 +727,13 @@ button:hover {
                                                         <input class="form-control" type="number" placeholder="3,33,333" id="example-number-input">
                                                     </div>  -->
                                                 </div>
-                                            </div>
+                                            </div>  
                                             <div class="col-lg-6">
                                                     
                                                     
                                                     <div class="mb-3">
                                                         <label for="example-datetime-local-input" class="form-label">Delivery Date</label>
-                                                        <input class="form-control" type="datetime-local" value="2019-08-19T13:45:00"
+                                                        <input class="form-control" name ="delivery_date" type="datetime-local" value=""
                                                             id="example-datetime-local-input">
                                                     </div>
                                                 
@@ -772,103 +780,152 @@ button:hover {
                                                     <tr>
                                                         <th scope="row">HP</th>
                                                         <td>
-                                                            <select required class="form-control form-select">
-                                                                <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <select required class="form-control form-select">
-                                                                <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <select required class="form-control form-select">
-                                                                <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <select required class="form-control form-select">
-                                                                <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <select required class="form-control form-select">
-                                                                <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <select required class="form-control form-select">
-                                                                <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
-                                                            </select>
-                                                        </td>
+                                                        <select name="jockey_hp" class="form-control form-select" style="width:250px">
+                                    <option value="">----- </option>
+                                    @foreach ($hp as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->hp_name }}</option>
+                                    @endforeach 
+                                      </select>
 
+
+                                                        </td>
+                                                        <td>
+                                                        <select name="hydrant_hp" class="form-control form-select" style="width:250px">
+                                    <option value="">----- </option>
+                                    @foreach ($hp as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->hp_name }}</option>
+                                    @endforeach
+                                      </select>
+                                                        </td>
+                                                        <td>
+                                                        <select name="standby_hp" class="form-control form-select" style="width:250px">
+                                    <option value="">----- </option>
+                                    @foreach ($hp as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->hp_name }}</option>
+                                    @endforeach
+                                      </select>
+                                                        </td>
+                                                        <td>
+                                                        <select name="sprinkler_hp" class="form-control form-select" style="width:250px">
+                                    <option value="">----- </option>
+                                    @foreach ($hp as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->hp_name }}</option>
+                                    @endforeach
+                                      </select>
+                                                        </td>
+                                                        <td>
+                                                        <select name="engine_hp" class="form-control form-select" style="width:250px">
+                                    <option value="">----- </option>
+                                    @foreach ($hp as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->hp_name }}</option>
+                                    @endforeach
+                                      </select>
+                                                        </td>
+                                                        <td>
+                                         <select name="booster_hp" class="form-control form-select" style="width:250px">
+                                    <option value="">----- </option>
+                                    @foreach ($hp as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->hp_name }}</option>
+                                    @endforeach
+                                      </select>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">No. Of PUMP</th>
                                                         <td>
                                                             <select required class="form-control form-select">
                                                                 <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <select required class="form-control form-select">
+                                                        <select required class="form-control form-select">
                                                                 <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <select required class="form-control form-select">
+                                                        <select required class="form-control form-select">
                                                                 <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <select required class="form-control form-select">
+                                                        <select required class="form-control form-select">
                                                                 <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <select required class="form-control form-select">
+                                                        <select required class="form-control form-select">
                                                                 <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <select required class="form-control form-select">
+                                                        <select required class="form-control form-select">
                                                                 <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+
                                                             </select>
                                                         </td>
                                                     </tr>
@@ -906,54 +963,66 @@ button:hover {
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <th scope="row">YES</th>
+                                                    <td>
+                                                              
+                                             <select name="indication_id" class="form-control form-select" style="width:250px">
+                                          <option value="">-----</option>
+
+                                          @foreach ($indication as $key => $value)
+                                          <option value="{{ $value->id }}">{{ $value->indication_name }}</option>
+                                          @endforeach
+                                            </select>
+                                                              </td>
                                                         <td>
-                                                            <select required class="form-control form-select">
+                                                              
+                                                        <select name="volmeter_id" class="form-control form-select" style="width:250px">
+                                                        <option value="">-----</option>
+                                    @foreach ($voltmeter as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->voltmeters_name }}</option>
+                                    @endforeach
+                                      </select>
+                                                        </td>
+                                                        <td>
+                                                        <select name="ammeter_id" class="form-control form-select" style="width:250px">
+                                                        <option value="">-----</option>
+                                    @foreach ($ammeter as $key => $value)
+                                    <option value="{{ $value->id }}">{{ $value->ammeters_name }}</option>
+                                    @endforeach
+                                      </select>
+                                                          
+                                                        </td>
+
+                                                        <td>
+                                                            <select name="spp" required class="form-control form-select">
                                                                 <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
+                                                                <option value="Yes">Yes</option>
+                                                                <option value="No">No</option>
+                                                            </select>
+                                                        </td>
+
+                                                        <td>
+                                                            <select name="hooter" required class="form-control form-select">
+                                                                <option value="">-----</option>
+                                                                <option value="Yes">Yes</option>
+                                                                <option value="No">No</option>
+                                                            </select>
+                                                        </td>
+
+                                                        <td>
+                                                        <select name="feeder_ammeter" required class="form-control form-select">
+                                                                <option value="">-----</option>
+                                                                <option value="Yes">Yes</option>
+                                                                <option value="No">No</option>
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <select required class="form-control form-select">
-                                                                <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <select required class="form-control form-select">
-                                                                <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <select required class="form-control form-select">
-                                                                <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <select required class="form-control form-select">
-                                                                <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <select required class="form-control form-select">
-                                                                <option value="">-----</option>
-                                                                <option value="wr">Writing</option>
-                                                                <option value="ph">Photography</option>
-                                                                <option value="cy">Cycling</option>
-                                                            </select>
+                                                           
+                                                   <select name="switchmake_id" class="form-control form-select" style="width:250px">
+                                                        <option value="">----- </option>
+                                                        @foreach ($ammeter as $key => $value)
+                                                        <option value="{{ $value->id }}">{{ $value->ammeters_name }}</option>
+                                                        @endforeach
+                                                        </select>
                                                         </td>
 
                                                     </tr>
@@ -961,7 +1030,6 @@ button:hover {
                                                 </tbody>
                                             </table>
                                         </div>
-                                   
                                         
                                     </div>
                                 </div>
@@ -982,36 +1050,40 @@ button:hover {
                                             <div class="col-lg-3">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label">PANEL LOCATION</label>
-                                                    <select required class="form-control form-select">
-                                                            <option value="">-----</option>
-                                                            <option value="wr">Writing</option>
-                                                            <option value="ph">Photography</option>
-                                                            <option value="cy">Cycling</option>
-                                                    </select>
+                                                   
+                                                    <select name="panellocations_id" class="form-control form-select" style="width:250px">
+                                                        <option value=""> ----- </option>
+                                                        @foreach ($panelLocation as $key => $value)
+                                                        <option value="{{ $value->id }}">{{ $value->panellocations_name	}}</option>
+                                                        @endforeach
+                                                        </select>
                                                 </div>
                                                 
                                             </div>
                                             <div class="col-lg-3">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label">PANEL COLOUR</label>
-                                                    <select required class="form-control form-select">
-                                                            <option value="">-----</option>
-                                                            <option value="wr">Writing</option>
-                                                            <option value="ph">Photography</option>
-                                                            <option value="cy">Cycling</option>
-                                                    </select>
+                                                    
+                                                    <select name="panel_id" class="form-control form-select" style="width:250px">
+                                                        <option value="">----- </option>
+                                                        @foreach ($panelcolour as $key => $value)
+                                                        <option value="{{ $value->id }}">{{ $value->panelcolours_name }}</option>
+                                                        @endforeach
+                                                        </select>
+
                                                 </div>
                                                 
                                             </div>
                                             <div class="col-lg-3">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label">BUSBAR</label>
-                                                    <select required class="form-control form-select">
-                                                            <option value="">-----</option>
-                                                            <option value="wr">Writing</option>
-                                                            <option value="ph">Photography</option>
-                                                            <option value="cy">Cycling</option>
-                                                    </select>
+
+                                                    <select name="busbar_id" class="form-control form-select" style="width:250px">
+                                                        <option value="">----- </option>
+                                                        @foreach ($busbar as $key => $value)
+                                                        <option value="{{ $value->id }}">{{ $value->busbars_type }}</option>
+                                                        @endforeach
+                                                        </select>
                                                 </div>
                                                 
                                             </div>
@@ -1019,19 +1091,19 @@ button:hover {
                                             <div class="col-lg-3">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label">CABLE ENTRY</label>
-                                                    <select required class="form-control form-select">
-                                                            <option value="">-----</option>
-                                                            <option value="wr">Writing</option>
-                                                            <option value="ph">Photography</option>
-                                                            <option value="cy">Cycling</option>
-                                                    </select>
+                                                    <select name="cable_enetry_id" class="form-control form-select" style="width:250px">
+                                                        <option value="">----- </option>
+                                                        @foreach ($cablentry as $key => $value)
+                                                        <option value="{{ $value->id }}">{{ $value->cabletypes_name }}</option>
+                                                        @endforeach
+                                                        </select>
                                                 </div>
                                                 
                                             </div>
                                             <div class="col-lg-3">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label">FEEDER AMMETER</label>
-                                                    <select required class="form-control form-select">
+                                                    <select name = "" required class="form-control form-select">
                                                             <option value="">-----</option>
                                                             <option value="wr">Writing</option>
                                                             <option value="ph">Photography</option>
@@ -1043,11 +1115,10 @@ button:hover {
                                             <div class="col-lg-3">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label">TYPE1 / TYPE2</label>
-                                                    <select required class="form-control form-select">
+                                                    <select name ="type" required class="form-control form-select">
                                                             <option value="">-----</option>
-                                                            <option value="wr">Writing</option>
-                                                            <option value="ph">Photography</option>
-                                                            <option value="cy">Cycling</option>
+                                                            <option value="type1">type1</option>
+                                                            <option value="type2">type2</option>
                                                     </select>
                                                 </div>
                                                 
@@ -1072,36 +1143,36 @@ button:hover {
                                             <div class="col-lg-3">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label">CABLE MAKE</label>
-                                                    <select required class="form-control form-select">
-                                                            <option value="">-----</option>
-                                                            <option value="wr">Writing</option>
-                                                            <option value="ph">Photography</option>
-                                                            <option value="cy">Cycling</option>
-                                                    </select>
+                                                    <select name="cable_make_id" class="form-control form-select" style="width:250px">
+                                                        <option value="">----- </option>
+                                                        @foreach ($cablemaketype as $key => $value)
+                                                        <option value="{{ $value->id }}">{{ $value->cablemake_name }}</option>
+                                                        @endforeach
+                                                        </select>
                                                 </div>
                                                 
                                             </div>
                                             <div class="col-lg-3">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label">ACCESS</label>
-                                                    <select required class="form-control form-select">
-                                                            <option value="">-----</option>
-                                                            <option value="wr">Writing</option>
-                                                            <option value="ph">Photography</option>
-                                                            <option value="cy">Cycling</option>
-                                                    </select>
+                                                    <select name="acess_id" class="form-control form-select" style="width:250px">
+                                                        <option value="">----- </option>
+                                                        @foreach ($access as $key => $value)
+                                                        <option value="{{ $value->id }}">{{ $value->access_name }}</option>
+                                                        @endforeach
+                                                        </select>
                                                 </div>
                                                 
                                             </div>
                                             <div class="col-lg-3">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label">MOUNTING</label>
-                                                    <select required class="form-control form-select">
-                                                            <option value="">-----</option>
-                                                            <option value="wr">Writing</option>
-                                                            <option value="ph">Photography</option>
-                                                            <option value="cy">Cycling</option>
-                                                    </select>
+                                                    <select name="mounting_id" class="form-control form-select" style="width:250px">
+                                                        <option value="">----- </option>
+                                                        @foreach ($mounting as $key => $value)
+                                                        <option value="{{ $value->id }}">{{ $value->mounting_name }}</option>
+                                                        @endforeach
+                                                        </select>
                                                 </div>
                                                 
                                             </div>
@@ -1109,12 +1180,12 @@ button:hover {
                                             <div class="col-lg-3">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label">PANEL TYPE</label>
-                                                    <select required class="form-control form-select">
-                                                            <option value="">-----</option>
-                                                            <option value="wr">Writing</option>
-                                                            <option value="ph">Photography</option>
-                                                            <option value="cy">Cycling</option>
-                                                    </select>
+                                                    <select name="panel_type_id" class="form-control form-select" style="width:250px">
+                                                        <option value="">----- </option>
+                                                        @foreach ($paneltype as $key => $value)
+                                                        <option value="{{ $value->id }}">{{ $value->paneltype_name }}</option>
+                                                        @endforeach
+                                                        </select>
                                                 </div>
                                                 
                                             </div>
@@ -1133,7 +1204,7 @@ button:hover {
                                             <div class="col-lg-12">
                                                 <div class="mb-3">
                                                     <label for="example-text-input" class="form-label"> REMARKS / SPECIAL INSTRUCTIONS </label>
-                                                    <textarea class="form-control" type="text" placeholder="Name"
+                                                    <textarea class="form-control" type="text" name ="special_instructions" placeholder="Name"
                                                     id="example-text-input"></textarea>
                                                 </div>
                                             </div>
@@ -1160,7 +1231,9 @@ button:hover {
     <span class="step"></span>
     <!-- <span class="step"></span> -->
   </div>
-</form>
+        <!-- <button type="submit" class="btn btn-info">  Add Product</button> -->
+
+      </form>
 
 @endsection
 
