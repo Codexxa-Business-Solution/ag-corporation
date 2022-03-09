@@ -20,13 +20,13 @@ class ProductController extends Controller
      */
     public function index()
     {
-    
+        
         $products = Product::join('units', 'units.id', '=', 'products.units')
         ->join('manufactures', 'manufactures.id', '=', 'products.manf_name')
         ->join('categories', 'categories.id', '=', 'products.category')
         ->join('sub_categories', 'sub_categories.id', '=', 'products.subcategory')
 
-        ->get(['products.id','products.item_name','products.category','products.subcategory','sub_categories.subcategory_name', 'products.manf_name','products.units','products.purchase_rate','products.purchase_discount','products.actual_rate', 'units.units', 'manufactures.manufacturing','categories.category_name']);
+        ->get(['products.id','products.item_name','products.discription','products.category','products.subcategory','sub_categories.subcategory_name', 'products.manf_name','products.units','products.purchase_rate','products.purchase_discount','products.actual_rate', 'units.units', 'manufactures.manufacturing','categories.category_name']);
 
 
             // // ->get(['units.*','manufactures.*',"product.item_name"]);
